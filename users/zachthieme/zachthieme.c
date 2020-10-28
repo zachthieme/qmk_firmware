@@ -1,3 +1,19 @@
+#include "zachthieme.h"
+
+/*
+### Combinations! ###
+
+I regularly use these for indent/outdent
+DF yields ]
+SD yields [
+
+Arrows can be handy without layers
+JK yields left arrow
+KL yields right arrow
+JI yields up arrow
+J, yields down arrow
+
+*/
 enum combos {
   DF_INDENT,
   SD_OUTDENT,
@@ -16,14 +32,22 @@ const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM jcomma_combo[] = {KC_J, KC_COMMA, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [DF_INDENT] = COMBO(df_combo, KC_LBRACKET),
-  [SD_OUTDENT] = COMBO(sd_combo, KC_RBRACKET),
+  [DF_INDENT] = COMBO(df_combo, KC_RBRACKET),
+  [SD_OUTDENT] = COMBO(sd_combo, KC_LBRACKET),
   [JK_LEFT] = COMBO(jk_combo, KC_LEFT),
   [KL_RIGHT] = COMBO(kl_combo, KC_RIGHT),
   [JI_UP] = COMBO(ji_combo, KC_UP),
   [JCOMMA_DOWN] = COMBO(jcomma_combo, KC_DOWN),
 };
 
+
+/*
+
+### LEADER KEY ###
+
+
+
+*/
 LEADER_EXTERNS();
 
 void matrix_scan_user(void) {
@@ -38,21 +62,25 @@ void matrix_scan_user(void) {
 
     SEQ_ONE_KEY(KC_L) {
       // Show which layer is on
+
       if (IS_LAYER_ON(0))
       {
-        SEND_STRING("Layer 0");
+        SEND_STRING("Windows");
+
       }
       if (IS_LAYER_ON(1))
       {
-        SEND_STRING("Layer 1");
+        SEND_STRING("Mac");
       }
     }
+
     SEQ_ONE_KEY(KC_MINS) {
-      if (IS_LAYER_ON(0) && IS_LAYER_OFF(1))
+      // Switch between mac and windows layer
+      if (IS_LAYER_ON(0))
       {
         layer_on(1);
       }
-      if (IS_LAYER_ON(1) && IS_LAYER_ON(0))
+      else if (IS_LAYER_ON(1))
       {
         layer_off(1);
       }

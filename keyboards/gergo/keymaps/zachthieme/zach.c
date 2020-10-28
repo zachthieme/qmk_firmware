@@ -16,8 +16,8 @@ const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM jcomma_combo[] = {KC_J, KC_COMMA, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [DF_INDENT] = COMBO(df_combo, KC_LBRACKET),
-  [SD_OUTDENT] = COMBO(sd_combo, KC_RBRACKET),
+  [DF_INDENT] = COMBO(df_combo, KC_RBRACKET),
+  [SD_OUTDENT] = COMBO(sd_combo, KC_LBRACKET),
   [JK_LEFT] = COMBO(jk_combo, KC_LEFT),
   [KL_RIGHT] = COMBO(kl_combo, KC_RIGHT),
   [JI_UP] = COMBO(ji_combo, KC_UP),
