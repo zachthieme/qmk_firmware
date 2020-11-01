@@ -1,33 +1,14 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
+#include "zachthieme.h"
+#include "babblePaste.h"
 
-#define KC_MAC_UNDO LGUI(KC_Z)
-#define KC_MAC_CUT LGUI(KC_X)
-#define KC_MAC_COPY LGUI(KC_C)
-#define KC_MAC_PASTE LGUI(KC_V)
-#define KC_MAC_PREWORD LALT(KC_LEFT)
-#define KC_MAC_NEXWORD LALT(KC_RIGHT)
-#define KC_MAC_BEGLINE LGUI(KC_LEFT)
-#define KC_MAC_ENDLINE LGUI(KC_RIGHT)
-#define KC_MAC_HEAD LGUI(KC_UP)
-#define KC_MAC_TAIL LGUI(KC_DOWN)
-#define KC_MAC_DPWORD LALT(KC_BSPACE)
-#define KC_MAC_DNWORD LALT(KC_DELETE)
+enum macro_keycodes {
+DHPASTE=1,
+VIBRK,
+};
 
-#define KC_PC_UNDO LCTL(KC_Z)
-#define KC_PC_CUT LCTL(KC_X)
-#define KC_PC_COPY LCTL(KC_C)
-#define KC_PC_PASTE LCTL(KC_V)
-#define KC_PC_PREWORD LCTL(KC_LEFT)
-#define KC_PC_NEXWORD LCTL(KC_RIGHT)
-#define KC_PC_BEGLINE KC_HOME
-#define KC_PC_ENDLINE KC_END
-
-// #define KC_PC_HEAD KC_HOME(KC_UP)
-// #define KC_PC_TAIL KC_HOME(KC_DOWN)
-// #define KC_PC_DPWORD LALT(KC_BSPACE)
-// #define KC_PC_DNWORD LALT(KC_DELETE)
-
+// #include process_record_user
 #define ES_LESS_MAC KC_GRAVE
 #define ES_GRTR_MAC LSFT(KC_GRAVE)
 #define ES_BSLS_MAC ALGR(KC_6)
@@ -44,9 +25,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
     KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_BSPACE,
     KC_GRAVE,       KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_GRAVE,                                       KC_EQUAL,       KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
-    LCTL_T(KC_DELETE),KC_A,         KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      RCTL_T(KC_QUOTE),
+    LCTL_T(KC_DELETE),KC_A,         KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      LT(4,KC_QUOTE),
     KC_LSPO,        LCTL_T(KC_Z),   LALT_T(KC_X),   KC_C,           KC_V,           KC_B,           KC_LBRACKET,                                    KC_RBRACKET,    KC_N,           KC_M,           KC_COMMA,       RALT_T(KC_DOT), RCTL_T(KC_SLASH),KC_RSPC,
-    KC_NO,          WEBUSB_PAIR,    KC_END,         KC_LGUI,        KC_LEAD,                                                                                                        KC_MINUS,       KC_BSPACE,      KC_LEFT,        KC_DOWN,        KC_RIGHT,
+    KC_MAKE,          KC_CCCV,    KC_END,         KC_LGUI,        KC_LEAD,                                                                                                        KC_MINUS,       KC_BSPACE,      KC_LEFT,        KC_DOWN,        KC_RIGHT,
                                                                                                     KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_MEDIA_PLAY_PAUSE,
                                                                                                                     KC_PGUP,        KC_PGDOWN,
                                                                                     LT(3,KC_SPACE),       LT(2,KC_TAB),   KC_MINUS,       KC_EQUAL,       LT(2,KC_ENTER), LT(3,KC_SPACE)
@@ -73,15 +54,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [3] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_DPWORD,  KC_MAC_DNWORD, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_PREWORD, KC_UP,          KC_MAC_NEXWORD, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPACE,      KC_DELETE,      KC_TRANSPARENT,                                                                 KC_MAC_BEGLINE, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_MAC_ENDLINE , KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_MAC_HEAD,    KC_PGUP,        KC_PGDOWN,      KC_MAC_TAIL,    KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_DPWORD,  KC_MAC_DNWORD, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_PREWORD, KC_UP,          KC_MAC_NEXWORD, KC_TRANSPARENT, Z_KVM_1,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPACE,      KC_DELETE,      KC_TRANSPARENT,                                                                 KC_MAC_BEGLINE, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_MAC_ENDLINE , Z_KVM_2,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_MAC_HEAD,    KC_PGUP,        KC_PGDOWN,      KC_MAC_TAIL,    KC_TRANSPARENT, Z_KVM_3,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, Z_KVM_4,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [4] = LAYOUT_ergodox_pretty(
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_0,           KC_7,           KC_8,           KC_9,           KC_KP_ASTERISK, KC_KP_PLUS,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT,        KC_RIGHT,       KC_UP,          KC_PGUP,                                                                        KC_0,           KC_4,           KC_5,           KC_6,           KC_KP_SLASH,    KC_KP_MINUS,
+    KC_TRANSPARENT, B_UNDO, B_CUT,  B_COPY,         B_PAST,         KC_PGDOWN,      KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_UP,          KC_KP_EQUAL,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+  ),
+  [5] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_P,           KC_Y,           KC_C,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_V,           KC_M,           KC_U,           KC_Z,           KC_L,           KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_N,           KC_I,           KC_S,           KC_F,                                                                           KC_D,           KC_T,           KC_H,           KC_O,           KC_R,           KC_TRANSPARENT,
@@ -93,6 +84,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
+
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // case KC_J:
+        //   if (record->event.pressed) {
+        //     #ifdef USE_BABLPASTE
+        //               SEND_STRING("babble");
+        //     #endif
+        //     send_string("keymap J");
+        //     SEND_STRING("JJJJ");
+        //   }
+        //   break;
+        // case KC_2:
+        //     if (layer_state_is(_GAMEPAD) && userspace_config.swapped_numbers) {
+        //         if (record->event.pressed) {
+        //             register_code(KC_1);
+        //         } else {
+        //             unregister_code(KC_1);
+        //         }
+        //         return false;
+        //     }
+        //     break;
+        // case KC_SWAP_NUM:
+        //     if (record->event.pressed) {
+        //         userspace_config.swapped_numbers ^= 1;
+        //         eeconfig_update_user(userspace_config.raw);
+        //         unregister_code(KC_1);
+        //         unregister_code(KC_2);
+        //     }
+        //     break;
+    }
+    return true;
+}
 //
 // extern bool g_suspend_state;
 // extern rgb_config_t rgb_matrix_config;
