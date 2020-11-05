@@ -1,6 +1,6 @@
 #pragma once
 #include "zachthieme.h"
-#include "babblePaste.h"
+// #include "babblePaste.h"
 
 #if defined(KEYMAP_SAFE_RANGE)
 #    define PLACEHOLDER_SAFE_RANGE KEYMAP_SAFE_RANGE
@@ -24,6 +24,10 @@ Z_KVM_1,
 Z_KVM_2,
 Z_KVM_3,
 Z_KVM_4,
+OS_COPY,
+OS_PASTE,
+OS_CUT,
+OS_UNDO,
 NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 };
 

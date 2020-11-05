@@ -1,5 +1,6 @@
 #include "zachthieme.h"
-#include "babblePaste.c"
+// #include "babblePaste.c"
+// #include "osKeys.c"
 
 uint16_t copy_paste_timer;
 
@@ -12,8 +13,22 @@ bool process_record_secrets(uint16_t keycode, keyrecord_t *record) { return true
 // Defines actions tor my global custom keycodes. Defined in zachthieme.h file
 // Then runs the _keymap's record handier if not processed here
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//
+// #ifdef USE_BABLPASTE
+//   babblePaste ( record,  keycode );
+//   return MACRO_NONE;
 
     switch (keycode) {
+// #ifdef USE_BABLPASTE
+//         case B_COPY:
+//
+//           babblePaste ( record, babble_mode );
+//           break;
+// #endif
+        //
+        // case OS_COPY ... OS_UNDO:
+        //   osKeys (keycode);
+        //   break;
 
         case VRSN:  // Prints firmware version
             if (record->event.pressed) {
@@ -25,7 +40,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
               layer_off(1);
               // switch_babble_mode(0);
-              babble_mode = 0;
+              // babble_mode = 0;
               tap_code(KC_LCTL);
               tap_code(KC_LCTL);
               tap_code(KC_1);
@@ -36,7 +51,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
               layer_on(1);
               // switch_babble_mode(1);
-              babble_mode = 1;
+              // babble_mode = 1;
               tap_code(KC_LCTL);
               tap_code(KC_LCTL);
               tap_code(KC_2);
@@ -47,7 +62,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
               layer_off(1);
               // switch_babble_mode(0);
-              babble_mode = 1;
+              // babble_mode = 0;
               tap_code(KC_LCTL);
               tap_code(KC_LCTL);
               tap_code(KC_3);
@@ -58,7 +73,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
               layer_off(1);
               // switch_babble_mode(0);
-              babble_mode = 1;
+              // babble_mode = 0;
               tap_code(KC_LCTL);
               tap_code(KC_LCTL);
               tap_code(KC_4);

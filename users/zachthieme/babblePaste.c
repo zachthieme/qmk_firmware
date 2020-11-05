@@ -8,7 +8,6 @@ and https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/keymaps/jee
 */
 
 #include "babblePaste.h"
-
 #include "action_macro.h"
 
 #ifdef USE_BABLPASTE
@@ -44,7 +43,14 @@ const  macro_t *babblePaste (keyrecord_t *record,  uint8_t shortcut) {
 		}
 */
 
-
+// switch (shortcut) {
+//   case 0:
+//     SEND_STRING("babblePaste: windows");
+//     break;
+//   case 1:
+//     SEND_STRING("babblePaste: mac");
+//     break;
+// }
 #ifdef MS_MODE
 	if ( BABL_WINDOWS  == shortcut ) { return switch_babble_mode(MS_MODE);  }
 #endif
@@ -92,7 +98,7 @@ const  macro_t *babblePaste (keyrecord_t *record,  uint8_t shortcut) {
 		BABLM( BABL_UNDO, 		D(LCTL), T(Z), U(LCTL), END );
 		BABLM( BABL_REDO, 		D(LCTL), T(Y), U(LCTL), END );
 		BABLM( BABL_CUT, 		D(LCTL), T(X), U(LCTL), END );
-		BABLM( BABL_COPY, 		D(LCTL), T(C), U(LCTL), END );
+		BABLM( BABL_COPY, 		LCTL(KC_C) );
 		BABLM( BABL_PASTE, 		D(LCTL), T(V), U(LCTL), END );
 		BABLM( BABL_SELECT_ALL, D(LCTL), T(A), U(LCTL), END );
 		BABLM( BABL_FIND, 		D(LCTL),T(F),  U(LCTL),END );
@@ -215,7 +221,7 @@ const  macro_t *babblePaste (keyrecord_t *record,  uint8_t shortcut) {
 		BABLM( BABL_UNDO , 		D(1), D(LGUI), T(Z), U(LGUI), END );
 		BABLM( BABL_REDO , 		D(LSFT),D(LGUI), T(Z), U(LSFT),U(LGUI), END );
 		BABLM( BABL_CUT ,		D(LGUI), T(X), U(LGUI), END );
-		BABLM( BABL_COPY ,		D(LGUI), T(C), U(LGUI), END );
+		BABLM( BABL_COPY ,		LGUI(KC_C) );
 		BABLM( BABL_PASTE ,		D(LGUI), T(V), U(LGUI), END );
 		BABLM( BABL_SELECT_ALL ,	D(LGUI), T(A), U(LGUI), END );
 		BABLM( BABL_FIND ,			D(LGUI),T(F),  U(LGUI),END );

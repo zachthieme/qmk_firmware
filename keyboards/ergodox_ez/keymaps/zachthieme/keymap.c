@@ -1,7 +1,8 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 #include "zachthieme.h"
-#include "babblePaste.h"
+// #include "babblePaste.h"
+
 
 enum macro_keycodes {
 DHPASTE=1,
@@ -53,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_DPWORD,  KC_MAC_DNWORD, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_PREWORD, KC_UP,          KC_MAC_NEXWORD, KC_TRANSPARENT, Z_KVM_1,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPACE,      KC_DELETE,      KC_TRANSPARENT,                                                                 KC_MAC_BEGLINE, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_MAC_ENDLINE , Z_KVM_2,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_MAC_HEAD,    KC_PGUP,        KC_PGDOWN,      KC_MAC_TAIL,    KC_TRANSPARENT, Z_KVM_3,
@@ -62,61 +63,61 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
-  [4] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_0,           KC_7,           KC_8,           KC_9,           KC_KP_ASTERISK, KC_KP_PLUS,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT,        KC_RIGHT,       KC_UP,          KC_PGUP,                                                                        KC_0,           KC_4,           KC_5,           KC_6,           KC_KP_SLASH,    KC_KP_MINUS,
-    KC_TRANSPARENT, B_UNDO, B_CUT,  B_COPY,         B_PAST,         KC_PGDOWN,      KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_UP,          KC_KP_EQUAL,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
-  ),
-  [5] = LAYOUT_ergodox_pretty(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_P,           KC_Y,           KC_C,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_V,           KC_M,           KC_U,           KC_Z,           KC_L,           KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_N,           KC_I,           KC_S,           KC_F,                                                                           KC_D,           KC_T,           KC_H,           KC_O,           KC_R,           KC_TRANSPARENT,
-    KC_TRANSPARENT, LCTL_T(KC_COMMA),LALT_T(KC_DOT), KC_J,           KC_G,           KC_SLASH,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_SCOLON,      KC_W,           KC_K,           RALT_T(KC_MINUS),RCTL_T(KC_X),   KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                    KC_E,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
-  ),
+  // [4] = LAYOUT_ergodox_pretty(
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_0,           KC_7,           KC_8,           KC_9,           KC_KP_ASTERISK, KC_KP_PLUS,
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT,        KC_RIGHT,       KC_UP,          KC_PGUP,                                                                        KC_0,           KC_4,           KC_5,           KC_6,           KC_KP_SLASH,    KC_KP_MINUS,
+  //   KC_TRANSPARENT, OS_UNDO, OS_CUT,  OS_COPY,      OS_PASTE,         KC_PGDOWN,      KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_0,           KC_1,           KC_2,           KC_3,           KC_UP,          KC_KP_EQUAL,
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+  //                                                                                                   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+  //                                                                                                                   KC_TRANSPARENT, KC_TRANSPARENT,
+  //                                                                                   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+  // ),
+  // [5] = LAYOUT_ergodox_pretty(
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_P,           KC_Y,           KC_C,           KC_B,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_V,           KC_M,           KC_U,           KC_Z,           KC_L,           KC_TRANSPARENT,
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_N,           KC_I,           KC_S,           KC_F,                                                                           KC_D,           KC_T,           KC_H,           KC_O,           KC_R,           KC_TRANSPARENT,
+  //   KC_TRANSPARENT, LCTL_T(KC_COMMA),LALT_T(KC_DOT), KC_J,           KC_G,           KC_SLASH,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_SCOLON,      KC_W,           KC_K,           RALT_T(KC_MINUS),RCTL_T(KC_X),   KC_TRANSPARENT,
+  //   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+  //                                                                                                   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+  //                                                                                                                   KC_TRANSPARENT, KC_TRANSPARENT,
+  //                                                                                   KC_E,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+  // ),
 };
 
-
-bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        // case KC_J:
-        //   if (record->event.pressed) {
-        //     #ifdef USE_BABLPASTE
-        //               SEND_STRING("babble");
-        //     #endif
-        //     send_string("keymap J");
-        //     SEND_STRING("JJJJ");
-        //   }
-        //   break;
-        // case KC_2:
-        //     if (layer_state_is(_GAMEPAD) && userspace_config.swapped_numbers) {
-        //         if (record->event.pressed) {
-        //             register_code(KC_1);
-        //         } else {
-        //             unregister_code(KC_1);
-        //         }
-        //         return false;
-        //     }
-        //     break;
-        // case KC_SWAP_NUM:
-        //     if (record->event.pressed) {
-        //         userspace_config.swapped_numbers ^= 1;
-        //         eeconfig_update_user(userspace_config.raw);
-        //         unregister_code(KC_1);
-        //         unregister_code(KC_2);
-        //     }
-        //     break;
-    }
-    return true;
-}
+//
+// bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         // case KC_J:
+//         //   if (record->event.pressed) {
+//         //     #ifdef USE_BABLPASTE
+//         //               SEND_STRING("babble");
+//         //     #endif
+//         //     send_string("keymap J");
+//         //     SEND_STRING("JJJJ");
+//         //   }
+//         //   break;
+//         // case KC_2:
+//         //     if (layer_state_is(_GAMEPAD) && userspace_config.swapped_numbers) {
+//         //         if (record->event.pressed) {
+//         //             register_code(KC_1);
+//         //         } else {
+//         //             unregister_code(KC_1);
+//         //         }
+//         //         return false;
+//         //     }
+//         //     break;
+//         // case KC_SWAP_NUM:
+//         //     if (record->event.pressed) {
+//         //         userspace_config.swapped_numbers ^= 1;
+//         //         eeconfig_update_user(userspace_config.raw);
+//         //         unregister_code(KC_1);
+//         //         unregister_code(KC_2);
+//         //     }
+//         //     break;
+//     }
+//     return true;
+// }
 //
 // extern bool g_suspend_state;
 // extern rgb_config_t rgb_matrix_config;
