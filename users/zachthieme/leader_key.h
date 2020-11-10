@@ -13,44 +13,7 @@ void matrix_scan_user(void) {
     }
 
     SEQ_ONE_KEY(KC_L) {
-      // Show which layer is on
-// #ifdef USE_BABLPASTE
-//   SEND_STRING("babblepaste");
-// #endif
-//       switch (babble_mode){
-//           case 0:
-//             SEND_STRING("win");
-//             break;
-//           case 1:
-//             SEND_STRING("mac");
-//             break;
-//           case 2:
-//             SEND_STRING("linux");
-//             break;
-//           default:
-//             SEND_STRING("None");
-//       }
 
-      // if (IS_LAYER_ON(0))
-      // {
-      //   SEND_STRING("Windows");
-      // }
-      // if (IS_LAYER_ON(1))
-      // {
-      //   SEND_STRING("Mac");
-      // }
-    }
-// TODO figure out how layer changes actually work and figure out how to sync correctly within the kvm changes
-    SEQ_ONE_KEY(KC_MINS) {
-      // Switch between mac and windows layer
-      if (IS_LAYER_ON(0))
-      {
-        layer_on(1);
-      }
-      else if (IS_LAYER_ON(1))
-      {
-        layer_off(1);
-      }
     }
 
     // SEQ_ONE_KEY(Z_KVM_1) {
