@@ -55,10 +55,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [3] = LAYOUT_ergodox_pretty(
     RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_DPWORD,  KC_MAC_DNWORD, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_PREWORD, KC_UP,          KC_MAC_NEXWORD, KC_TRANSPARENT, Z_KVM_1,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_DPWORD,  KC_MAC_DNWORD,  KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_MAC_PREWORD, KC_UP,          KC_MAC_NEXWORD, KC_TRANSPARENT, Z_KVM_1,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPACE,      KC_DELETE,      KC_TRANSPARENT,                                                                 KC_MAC_BEGLINE, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_MAC_ENDLINE , Z_KVM_2,
-    KC_TRANSPARENT, OS_UNDO,        OS_CUT,         OS_COPY,        OS_PASTE, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_MAC_HEAD,    KC_PGUP,        KC_PGDOWN,      KC_MAC_TAIL,    KC_TRANSPARENT, Z_KVM_3,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, Z_KVM_4,
+    KC_TRANSPARENT, OS_UNDO,        OS_CUT,         OS_COPY,        OS_PASTE,       KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_MAC_HEAD,    KC_PGUP,        KC_PGDOWN,      KC_MAC_TAIL,    KC_TRANSPARENT, Z_KVM_3,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_ESCAPE,      KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, Z_KVM_4,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT

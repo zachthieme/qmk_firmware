@@ -42,5 +42,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RESET,           KC_TRNS,       KC_TRNS,       KC_MAC_DPWORD, KC_MAC_DNWORD, KC_TRNS,                                                KC_TRNS,       KC_MAC_PREWORD,KC_UP,         KC_MAC_NEXWORD,  KC_TRNS,           Z_KVM_1,
     KC_TRNS,         KC_TRNS,       KC_TRNS,       KC_BSPACE,     KC_DELETE,     KC_TRNS,   KC_TRNS,                          KC_TRNS,   KC_MAC_BEGLINE,KC_LEFT,       KC_DOWN,       KC_RIGHT,        KC_MAC_ENDLINE,    Z_KVM_2,
     KC_MAKE,         KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS,   KC_TRNS, KC_TRNS,       KC_TRNS,  KC_TRNS,   KC_MAC_HEAD,   KC_PGUP,       KC_PGDN,       KC_MAC_TAIL,     KC_TRNS,           Z_KVM_3,
-                                                            KC_TRNS, KC_TRNS,   KC_TRNS,      KC_TRNS,          KC_TRNS,      KC_TRNS,        KC_TRNS, KC_TRNS),
+                                                            KC_TRNS, KC_TRNS,   KC_TRNS,      KC_TRNS,          KC_TRNS,      KC_TRNS,        KC_ESCAPE, KC_TRNS),
 };
