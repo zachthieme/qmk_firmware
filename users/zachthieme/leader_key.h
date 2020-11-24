@@ -1,20 +1,20 @@
 // TODO add any destructions and examples
-
-LEADER_EXTERNS();
-
-void matrix_scan_user(void) {
-  LEADER_DICTIONARY() {
-    leading = false;
-    leader_end();
-
-    SEQ_ONE_KEY(KC_T) {
-      // Anything you can do in a macro.
-      SEND_STRING("- [ ]");
-    }
-
-    SEQ_ONE_KEY(KC_L) {
-
-    }
+// 
+// LEADER_EXTERNS();
+//
+// void matrix_scan_user(void) {
+//   LEADER_DICTIONARY() {
+//     leading = false;
+//     leader_end();
+//
+//     SEQ_ONE_KEY(KC_T) {
+//       // Anything you can do in a macro.
+//       SEND_STRING("[ ]");
+//     }
+//
+//     SEQ_ONE_KEY(KC_L) {
+//
+//     }
 
     // SEQ_ONE_KEY(Z_KVM_1) {
     //   // change to KVM1 - my PC
@@ -39,8 +39,8 @@ void matrix_scan_user(void) {
 
 // helper
 //  TODO look into secrets from drashna
-    SEQ_ONE_KEY(KC_GESC) {
-        SEND_STRING("45!");
-    }
+    // SEQ_ONE_KEY(KC_GESC) {
+    //     SEND_STRING("45!");
+    // }
   }
 }
