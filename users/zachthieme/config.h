@@ -1,7 +1,7 @@
 
 #define IGNORE_MOD_TAP_INTERRUPT
 #define LEADER_TIMEOUT 300
-#define COMBO_COUNT 6
+// #define COMBO_COUNT 6
 
 #ifdef TAPPING_TERM
 #    undef TAPPING_TERM
