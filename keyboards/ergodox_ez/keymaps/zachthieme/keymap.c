@@ -3,7 +3,6 @@
 #include "zachthieme.h"
 // #include "babblePaste.h"
 
-
 enum macro_keycodes {
 DHPASTE=1,
 VIBRK,

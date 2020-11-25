@@ -7,7 +7,7 @@
 #    undef TAPPING_TERM
 #endif  // TAPPING_TERM
 #if defined(KEYBOARD_ergodox_ez)
-#    define TAPPING_TERM 250
+#    define TAPPING_TERM 200
 #elif defined(KEYBOARD_gergo)
 #    define TAPPING_TERM 200
 #else
