@@ -3,16 +3,15 @@
 // #define LEADER_TIMEOUT 300
 // #define COMBO_COUNT 6
 
-#ifdef TAPPING_TERM
 #    undef TAPPING_TERM
-#endif  // TAPPING_TERM
 #if defined(KEYBOARD_ergodox_ez)
-#    define TAPPING_TERM 200
+#    define TAPPING_TERM 300
 #elif defined(KEYBOARD_gergo)
 #    define TAPPING_TERM 200
 #else
 #    define TAPPING_TERM 200
 #endif
+
 #define TAP_CODE_DELAY 5
 
 
