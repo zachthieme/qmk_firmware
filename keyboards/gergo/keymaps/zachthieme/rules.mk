@@ -3,18 +3,18 @@
 # Make sure you have dfu-programmer installed!
 #----------------------------------------------------------------------------
 # Firmware options
-BALLER = no 			# Enable to ball out
-BALLSTEP = 20  			# Multiple in px to move, multiplied by layer number
-SCROLLSTEP = 1 			# Lines to scroll with ball
-MOUSEKEY_ENABLE = yes  		# Mouse keys, needed for baller
+# BALLER = no 			# Enable to ball out
+# BALLSTEP = 20  			# Multiple in px to move, multiplied by layer number
+# SCROLLSTEP = 1 			# Lines to scroll with ball
+# MOUSEKEY_ENABLE = yes  		# Mouse keys, needed for baller
 # LEADER_ENABLE = yes # Enable the leader key
 # COMBO_ENABLE = yes
 
 #Debug options
-VERBOSE 		 = yes
+VERBOSE 		 = no
 DEBUG_MATRIX_SCAN_RATE   = no
 DEBUG_BALLER 		 = no
-DEBUG_MATRIX		 = yes
+DEBUG_MATRIX		 = no
 
 # A bunch of stuff that you shouldn't touch unless you
 # know what you're doing.
