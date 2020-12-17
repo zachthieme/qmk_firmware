@@ -1,5 +1,4 @@
 #include "zachthieme.h"
-#include "osKeys.c"
 
 uint16_t copy_paste_timer;
 
@@ -14,63 +13,63 @@ bool process_record_secrets(uint16_t keycode, keyrecord_t *record) { return true
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     switch (keycode) {
-
-        case OS_COPY ... OS_UNDO:
-          if (record->event.pressed) {
-            osKeys (keycode);
-          }
-          break;
-
-        case VRSN:  // Prints firmware version
-            if (record->event.pressed) {
-                send_string_with_delay_P(PSTR(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION ", Built on: " QMK_BUILDDATE), TAP_CODE_DELAY);
-            }
-            break;
-        case  Z_KVM_1:
-        // case Z_KVM_1:
-            if (record->event.pressed) {
-              layer_off(1);
-              // switch_babble_mode(0);
-              // babble_mode = 0;
-              tap_code(KC_LCTL);
-              tap_code(KC_LCTL);
-              tap_code(KC_1);
-                // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F1));
-            }
-            break;
-        case Z_KVM_2:
-            if (record->event.pressed) {
-              layer_on(1);
-              // switch_babble_mode(1);
-              // babble_mode = 1;
-              tap_code(KC_LCTL);
-              tap_code(KC_LCTL);
-              tap_code(KC_2);
-                // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F2));
-            }
-            break;
-        case Z_KVM_3:
-            if (record->event.pressed) {
-              layer_off(1);
-              // switch_babble_mode(0);
-              // babble_mode = 0;
-              tap_code(KC_LCTL);
-              tap_code(KC_LCTL);
-              tap_code(KC_3);
-                // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F3));
-            }
-            break;
-        case Z_KVM_4:
-            if (record->event.pressed) {
-              layer_off(1);
-              // switch_babble_mode(0);
-              // babble_mode = 0;
-              tap_code(KC_LCTL);
-              tap_code(KC_LCTL);
-              tap_code(KC_4);
-                // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F4));
-            }
-            break;
+    //
+    //     case OS_COPY ... OS_UNDO:
+    //       if (record->event.pressed) {
+    //         osKeys (keycode);
+    //       }
+    //       break;
+    //
+    //     case VRSN:  // Prints firmware version
+    //         if (record->event.pressed) {
+    //             send_string_with_delay_P(PSTR(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION ", Built on: " QMK_BUILDDATE), TAP_CODE_DELAY);
+    //         }
+    //         break;
+    //     case  Z_KVM_1:
+    //     // case Z_KVM_1:
+    //         if (record->event.pressed) {
+    //           layer_off(1);
+    //           // switch_babble_mode(0);
+    //           // babble_mode = 0;
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_1);
+    //             // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F1));
+    //         }
+    //         break;
+    //     case Z_KVM_2:
+    //         if (record->event.pressed) {
+    //           layer_on(1);
+    //           // switch_babble_mode(1);
+    //           // babble_mode = 1;
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_2);
+    //             // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F2));
+    //         }
+    //         break;
+    //     case Z_KVM_3:
+    //         if (record->event.pressed) {
+    //           layer_off(1);
+    //           // switch_babble_mode(0);
+    //           // babble_mode = 0;
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_3);
+    //             // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F3));
+    //         }
+    //         break;
+    //     case Z_KVM_4:
+    //         if (record->event.pressed) {
+    //           layer_off(1);
+    //           // switch_babble_mode(0);
+    //           // babble_mode = 0;
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_LCTL);
+    //           tap_code(KC_4);
+    //             // SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) SS_TAP(X_F4));
+    //         }
+    //         break;
         case KC_CCCV:  // One key copy/paste
             if (record->event.pressed) {
                 copy_paste_timer = timer_read();
@@ -107,12 +106,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     #endif
                     }
                     send_string_with_delay_P(PSTR("-kb " QMK_KEYBOARD " -km " QMK_KEYMAP), TAP_CODE_DELAY);
-    #ifdef RGB_MATRIX_SPLIT_RIGHT
-                    send_string_with_delay_P(PSTR(" RGB_MATRIX_SPLIT_RIGHT=yes"), TAP_CODE_DELAY);
-    #    ifndef OLED_DRIVER_ENABLE
-                    send_string_with_delay_P(PSTR(" OLED_DRIVER_ENABLE=no"), TAP_CODE_DELAY);
-    #    endif
-    #endif
+    // #ifdef RGB_MATRIX_SPLIT_RIGHT
+    //                 send_string_with_delay_P(PSTR(" RGB_MATRIX_SPLIT_RIGHT=yes"), TAP_CODE_DELAY);
+    // #    ifndef OLED_DRIVER_ENABLE
+    //                 send_string_with_delay_P(PSTR(" OLED_DRIVER_ENABLE=no"), TAP_CODE_DELAY);
+    // #    endif
+    // #endif
                     send_string_with_delay_P(PSTR(SS_TAP(X_ENTER)), TAP_CODE_DELAY);
                 }
 
