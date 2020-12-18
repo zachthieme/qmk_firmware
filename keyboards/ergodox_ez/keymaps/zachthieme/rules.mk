@@ -2,4 +2,3 @@
 # See rules at https://docs.qmk.fm/#/config_options?id=the-rulesmk-file
 WEBUSB_ENABLE = yes
 ORYX_ENABLE = yes
-SRC += zachthieme.c
