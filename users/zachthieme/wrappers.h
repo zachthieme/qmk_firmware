@@ -39,6 +39,13 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________QWERTY_R2_________________        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
 #define _________________QWERTY_R3_________________        KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH
 
+#define _______________QWERTY_MOD_L1_______________        KC_Q,              KC_W,          KC_E,          KC_R,         KC_T
+#define _______________QWERTY_MOD_L2_______________        LGUI_T(KC_A),      LCTL_T(KC_S),  LALT_T(KC_D),  KC_F,         KC_G
+#define _______________QWERTY_MOD_L3_______________        TD(TD_FILE_MAIL),  KC_X,          KC_C,          KC_V,         KC_B
+
+#define _______________QWERTY_MOD_R1_______________        KC_Y,              KC_U,          KC_I,          KC_O,         KC_P
+#define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,          RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN)
+#define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,          KC_COMM,       KC_DOT,       KC_SLASH
 
 #define _________________COLEMAK_L1________________       KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
 #define _________________COLEMAK_L2________________       KC_A,    KC_R,    KC_S,    KC_T,    KC_D
