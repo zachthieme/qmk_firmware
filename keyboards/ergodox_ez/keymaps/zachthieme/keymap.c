@@ -15,7 +15,7 @@
     KC_NO,  KC_HOME,   KC_END, KC_LGUI, LT(_FLASH,KC_LBRACKET),                                  KC_MINUS,       KC_BSPACE,      KC_NO,         KC_NO,         KC_NO, \
                                                 KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_MEDIA_PLAY_PAUSE, \
                                                               KC_PGUP,        KC_PGDOWN, \
-                  LT(_NAVIGATION,KC_SPACE),       LT(_NUMBERS,KC_TAB),   KC_MINUS,       KC_LBRACKET,       LT(2,KC_ENTER), LT(1,KC_SPACE) \
+                  LT(_NAVIGATION,KC_SPACE),       LT(_NUMBERS,KC_TAB),   KC_MINUS,       KC_LBRACKET,       LT(_NUMBERS,KC_ENTER), LT(_NAVIGATION,KC_SPACE) \
     )
 
 #define LAYOUT_ergodox_base_wrapper(...)       LAYOUT_ergodox_base(__VA_ARGS__)
@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_NAVIGATION] = LAYOUT_ergodox_base_wrapper(
     __________________BLANK_6__________________, ___________________NAV_R1__________________,
-    __________________BLANK_6__________________, ___________________NAV_R2__________________,
+    ___________________NAV_L2__________________, ___________________NAV_R2__________________,
     __________________BLANK_6__________________, ___________________NAV_R3__________________
   ),
 

@@ -170,6 +170,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_R2__________________        KC_MAC_BEGLINE,  KC_LEFT,        KC_DOWN,  KC_RIGHT,       KC_MAC_ENDLINE, KC_NO
 #define ___________________NAV_R3__________________        KC_MAC_HEAD,     KC_PGUP,        KC_PGDN,  KC_MAC_TAIL,    KC_NO,          KC_NO
 
+#define ___________________NAV_L2__________________        _______, _______, _______, KC_BSPC, KC_DEL, _______
+
 #define ___________________FLASH___________________        KC_NO, KC_MAKE, KC_NO, KC_NO, KC_NO, RESET
 
 
