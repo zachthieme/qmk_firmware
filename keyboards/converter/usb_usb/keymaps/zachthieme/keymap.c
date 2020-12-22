@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 #include "zachthieme.h"
+#include "version.h"
 #include "tapdance.h"
 
 /* 0: plain Qwerty without layer switching
@@ -38,20 +39,45 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * `-----------------------------------------------------------' `-----------' `---------------' `-------'
  */
 
- // TODO: Finish _NAVIGATION
+// TODO: Finish _NAVIGATION
+// TODO: finish wrapper work  
+
+ // #define LAYOUT_iso_base( \
+ //     K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, \
+ //     K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, \
+ //     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
+ //   ) \
+ //   LAYOUT_iso_wrapper( \
+ //     KC_NO,             KC_NO,        KC_NO,     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  KC_NO,    KC_NO, KC_NO,                                                                                \
+ //     KC_ESC,            K3A,          K3B,       K3C,   K3D,   K3E,   K3F,   K40,   K41,    K42,      K43,       K44,   K45,             K46,   K47,   K48,      KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO,        \
+ //     KC_GRV,            K1E,          K1F,       K20,   K21,   K22,   K23,   K24,   K25,    K26,      K27,       K2D,   K2E,   KC_NO, K2A,      K49,   K4A,   K4B,      K53,   K54,   K55,   K56,      KC_NO, KC_NO, \
+ //     KC_TAB,            K01,          K02,       K03,   K04,   K05,   K06,   K07,   K08,    K09,      K0A,       K2F,   K30,          K32,      K4C,   K4D,   K4E,      K5F,   K60,   K61,   K57,      KC_NO, KC_NO, \
+ //     LCTL(KC_DELETE),   K11,          K12,       K13,   K14,   K15,   K16,   K17,   K18,    K19,      K1A,       K34,          K32,   K28,                              K5C,   K5D,   K5E,   KC_NO,    KC_NO, KC_NO, \
+ //     KC_LSPO,           K21,          K22,       K23,   K24,   K25,   K26,   K27,   K28,    K29,      K2A,       K38,          KC_NO, KE5,             K52,             K59,   K5A,   K5B,   KC_NO,    KC_NO, KC_NO, \
+ //     LT(2,KC_LCTL),     KC_LBRACKET,  KC_LALT,   KC_NO, KC_NO,      LT(_NAVIGATION,KC_SPC), KC_RALT,  KC_MINS,   K65,   KE4,      K50,   K51,   K4F,      K62,          K63,   K58,      KC_NO, KC_NO  \
+ //
+ //
+ //
+ //    KC_F13,           KC_F14,       KC_F15,       KC_F16,       KC_F17,   KC_F18, KC_F19, KC_F20, KC_F21, KC_F22,   KC_F23,  KC_F24, \
+ //    KC_ESC,           KC_F1,        KC_F2,        KC_F3,        KC_F4,    KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,    KC_F10,  KC_F11,  KC_F12, KC_PSCR, KC_SLCK, KC_PAUS,    KC_VOLD, KC_VOLU, KC_MUTE, KC_PWR,     KC_HELP, \
+ //    KC_GRV,           KC_1,         KC_2,         KC_3,         KC_4,     KC_5,   KC_6,   KC_7,   KC_8,   KC_9,     KC_0,    KC_MINS, KC_EQL, KC_JYEN, KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,    KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,    KC_STOP, KC_AGIN, \
+ //    KC_TAB,           K01,          K02,          K03,          K04,      K05,    K06,    K07,    K08,    K09,      K0A,     KC_LBRC, KC_RBRC,KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,    KC_7,   KC_8,   KC_9,   KC_PPLS,    KC_MENU, KC_UNDO, \
+ //    LCTL_T(KC_DELETE),K11,          K12,          K13,          K14,      K15,    K16,    K17,    K18,    K19,      K1A,     KC_QUOTE,KC_NUHS,LT(3,KC_ENT),                                    KC_4,   KC_5,   KC_6,   KC_PCMM,    KC_SLCT, KC_COPY, \
+ //    KC_LSPO,KC_NUBS,  K21,          K22,          K23,          K24,      K25,    K26,    K27,    K28,    K29,      K2A,     KC_RO, KC_RSPC,              KC_UP,               KC_1,   KC_2,   KC_3,   KC_PEQL,    KC_EXEC, KC_PSTE, \
+ //    LT(2,KC_LCTL),          KC_LBRACKET,  KC_LALT,      KC_MHEN, KC_HANJ,         LT(_NAVIGATION,KC_SPC),         KC_HAEN, KC_HENK, KC_KANA, KC_RALT, KC_MINUS, KC_APP,  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT \
+ //   )
+ //
+ // #define LAYOUT_iso_base_wrapper(...)       LAYOUT_iso_base(__VA_ARGS__)
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [_QWERTY] = LAYOUT_all(
-                      KC_F13,       KC_F14,       KC_F15,       KC_F16, KC_F17, KC_F18, KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,  KC_F24,
-    KC_ESC,           KC_F1,        KC_F2,        KC_F3,        KC_F4,  KC_F5,  KC_F6,  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,               KC_PSCR, KC_SLCK, KC_PAUS,    KC_VOLD, KC_VOLU, KC_MUTE, KC_PWR,     KC_HELP,
-    KC_GRV,           KC_1,         KC_2,         KC_3,         KC_4,    KC_5,   KC_6,   KC_7,   KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_JYEN, KC_BSPC,     KC_INS,  KC_HOME, KC_PGUP,    KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,    KC_STOP, KC_AGIN,
-    KC_TAB,           KC_Q,         KC_W,         KC_E,         KC_R,    KC_T,   KC_Y,   KC_U,   KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,    KC_7,   KC_8,   KC_9,   KC_PPLS,    KC_MENU, KC_UNDO,
-    LCTL_T(KC_DELETE),LGUI_T(KC_A), LCTL_T(KC_S), LALT_T(KC_D),    KC_F,    KC_G,   KC_H,   KC_J,   LALT_T(KC_K),   LCTL_T(KC_L),   LGUI_T(KC_SCOLON),      KC_QUOTE,          KC_NUHS, LT(3,KC_ENT),                                    KC_4,   KC_5,   KC_6,   KC_PCMM,    KC_SLCT, KC_COPY,
-    KC_LSPO,          KC_NUBS,      KC_Z,         KC_X,    KC_C,    KC_V,   KC_B,   KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RO,   KC_RSPC,              KC_UP,               KC_1,   KC_2,   KC_3,   KC_PEQL,    KC_EXEC, KC_PSTE,
-    LT(2,KC_LCTL),          KC_LBRACKET,  KC_LALT,      KC_MHEN, KC_HANJ,         LT(1,KC_SPC),         KC_HAEN, KC_HENK, KC_KANA, KC_RALT, KC_MINUS, KC_APP,  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT
-    ),
-    [_FLASH] = LAYOUT_all(
+    [_QWERTY] = LAYOUT_all_base_wrapper(
+      _______________QWERTY_MOD_L1_______________, _______________QWERTY_MOD_R1_______________,
+      _______________QWERTY_MOD_L2_______________, _______________QWERTY_MOD_R2_______________,
+      _______________QWERTY_MOD_L3_______________, _______________QWERTY_MOD_R3_______________
+      ),
+    [_FLASH] = LAYOUT_all_wrapper(
                       ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______,
     ______,           ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______,             ______,______,______,    ______,______,______,RESET,    ______,
     ______,  ______,  ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______, ______,     ______,______,______,    ______,______,______,______,    ______,______,
@@ -61,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ______,  ______,  ______,  ______,  ______,         ______,           ______, ______,  ______, ______, ______, ______, ______,     ______,______,______,    ______,       ______,KC_MAKE,    ______,______
     ),
 
-    [_NAVIGATION] = LAYOUT_all(
+    [_NAVIGATION] = LAYOUT_all_wrapper(
                       ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______,
     ______,           ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______,             ______,______,______,    ______,______,______,______,    ______,
     ______,  ______,  ______,  ______,  ______, ______, ______,  ______,  ______, ______,  ______, ______, ______, ______, ______,     ______,______,______,    ______,______,______,______,    ______,______,

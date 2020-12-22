@@ -39,13 +39,13 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________QWERTY_R2_________________        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
 #define _________________QWERTY_R3_________________        KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH
 
-#define _______________QWERTY_MOD_L1_______________        KC_Q,              KC_W,          KC_E,          KC_R,         KC_T
-#define _______________QWERTY_MOD_L2_______________        LGUI_T(KC_A),      LCTL_T(KC_S),  LALT_T(KC_D),  KC_F,         KC_G
-#define _______________QWERTY_MOD_L3_______________        TD(TD_FILE_MAIL),  KC_X,          KC_C,          KC_V,         KC_B
+#define _______________QWERTY_MOD_L1_______________        KC_ESC,            KC_Q,              KC_W,          KC_E,          KC_R,          KC_T
+#define _______________QWERTY_MOD_L2_______________        LCTL_T(KC_DEL),    LGUI(KC_A),        LCTL(KC_S),    LALT(KC_D),    KC_F,          KC_G
+#define _______________QWERTY_MOD_L3_______________        KC_LSPO,           TD(TD_FILE_MAIL),  KC_X,          KC_C,          KC_V,          KC_B
 
-#define _______________QWERTY_MOD_R1_______________        KC_Y,              KC_U,          KC_I,          KC_O,         KC_P
-#define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,          RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN)
-#define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,          KC_COMM,       KC_DOT,       KC_SLASH
+#define _______________QWERTY_MOD_R1_______________        KC_Y,              KC_U,              KC_I,          KC_O,         KC_P,          KC_BSLS
+#define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,              RALT(KC_K),    RCTL(KC_L),   RGUI(KC_SCLN), RCTL_T(KC_QUOT)
+#define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
 #define _________________COLEMAK_L1________________       KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
 #define _________________COLEMAK_L2________________       KC_A,    KC_R,    KC_S,    KC_T,    KC_D
@@ -159,6 +159,19 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________FUNC_RIGHT________________       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10
 
 #define ___________________BLANK___________________        _______, _______, _______, _______, _______
+
+#define __________________BLANK_6__________________        _______, _______, _______, _______, _______, _______
+
+#define _________________NUMBER_R1_________________        KC_P0,    KC_P7, KC_P8, KC_P9, KC_PPLS, KC_PAST
+#define _________________NUMBER_R2_________________        KC_P0,    KC_P4, KC_P5, KC_P6, KC_PMNS, KC_PSLS
+#define _________________NUMBER_R3_________________        KC_PDOT,  KC_P1, KC_P2, KC_P3, KC_P0,   KC_PEQL
+
+#define ___________________NAV_R1__________________        KC_NO,           KC_MAC_PREWORD, KC_UP,    KC_MAC_NEXWORD, KC_NO,          KC_NO
+#define ___________________NAV_R2__________________        KC_MAC_BEGLINE,  KC_LEFT,        KC_DOWN,  KC_RIGHT,       KC_MAC_ENDLINE, KC_NO
+#define ___________________NAV_R3__________________        KC_MAC_HEAD,     KC_PGUP,        KC_PGDN,  KC_MAC_TAIL,    KC_NO,          KC_NO
+
+#define ___________________FLASH___________________        KC_NO, KC_MAKE, KC_NO, KC_NO, KC_NO, RESET
+
 
 //
 // #define _________________LOWER_L1__________________        KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
