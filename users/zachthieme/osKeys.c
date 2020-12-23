@@ -26,5 +26,4 @@ const macro_t *osKeys(uint16_t keycode) {
 uint8_t switch_os_keys_mode( uint8_t id) {
  os_keys_mode = id;
  return id;
-
 }

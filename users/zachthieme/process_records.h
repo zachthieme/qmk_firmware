@@ -51,7 +51,7 @@
 #define BB3 LT(_NUMBERS,KC_ENTER)
 #define ZT_FLASH LT(_FLASH,KC_LBRACKET)
 
-// MACRO's for moving windows
+// MACRO's for moving windows on Mac
 #define WIN_L23 LCTL(LALT(KC_P1))
 #define WIN_R23 LCTL(LALT(KC_P2))
 #define WIN_RB  LCTL(LALT(KC_P3))
