@@ -20,7 +20,6 @@
 
 #define LAYOUT_ergodox_base_wrapper(...)       LAYOUT_ergodox_base(__VA_ARGS__)
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_ergodox_base_wrapper(
     _______________QWERTY_MOD_L1_______________, _______________QWERTY_MOD_R1_______________,
