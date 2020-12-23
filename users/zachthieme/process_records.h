@@ -43,3 +43,11 @@
 // #define DAV_SEL_ALL,
 // #define DAV_SEL_END,
 #define DAV_SNAP KC_N
+
+// MACRO's to clean up keymaps
+#define MUTE KC_AUDIO_MUTE
+#define BB1 LT(_NAVIGATION,KC_SPACE)
+#define BB2 LT(_NUMBERS,KC_TAB)
+#define BB3 LT(_NUMBERS,KC_ENTER)
+#define BB4 LT(_NAVIGATION,KC_SPACE)
+#define ZT_FLASH LT(_FLASH,KC_LBRACKET)
