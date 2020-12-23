@@ -38,7 +38,7 @@
     KC_NO,      KC_HOME,   KC_END,  K30,      K31,                                                       K32,   K33,      KC_NO,     KC_NO,  KC_NO, \
                                                        MUTE,  KC_VOLD,                   KC_VOLU,        KC_MEDIA_PLAY_PAUSE, \
                                                               KC_PGUP,                   KC_PGDOWN, \
-                                                   BB1, BB2,  KC_LBRACKET,               KC_MINUS, BB3, BB4 \
+                                                   BB1, BB2,  KC_LBRACKET,               KC_MINUS, BB3, BB1 \
     )
 
 #define LAYOUT_ergodox_pretty_base_wrapper(...)       LAYOUT_ergodox_pretty_base(__VA_ARGS__)
@@ -50,18 +50,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______________QWERTY_MOD_L3_______________, _______________QWERTY_MOD_R3_______________,
     ___________________META_L__________________, ___________________META_R__________________
     ),
-  [_NAVIGATION] = LAYOUT_ergodox_pretty_base_wrapper(
-    __________________BLANK_6__________________, ___________________NAV_R1__________________,
-    ___________________NAV_L2__________________, ___________________NAV_R2__________________,
-    __________________BLANK_6__________________, ___________________NAV_R3__________________,
-    ___________________META_L__________________, ________________META_R_ALT_________________
-  ),
 
   [_NUMBERS] = LAYOUT_ergodox_pretty_base_wrapper(
     __________________BLANK_6__________________, _________________NUMBER_R1_________________,
     __________________BLANK_6__________________, _________________NUMBER_R2_________________,
     __________________BLANK_6__________________, _________________NUMBER_R3_________________,
     ___________________META_L__________________, ___________________META_R__________________
+  ),
+
+  [_NAVIGATION] = LAYOUT_ergodox_pretty_base_wrapper(
+    __________________BLANK_6__________________, ___________________NAV_R1__________________,
+    ___________________NAV_L2__________________, ___________________NAV_R2__________________,
+    __________________BLANK_6__________________, ___________________NAV_R3__________________,
+    ___________________META_L__________________, ________________META_R_ALT_________________
   ),
 
   [_FLASH] = LAYOUT_ergodox_pretty_base_wrapper(
