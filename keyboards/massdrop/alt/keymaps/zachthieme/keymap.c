@@ -12,7 +12,9 @@
  * ),
 */
 
-// TODO: figure out why this bin bricks the keyboard
+// TODO: figure out why this binaryas bricks the keyboard
+//  the internet seems to believe this is an issue due to QMK and ALT not using the same version of QMK
+//  the binary size of my alt is 1400k which is way too small
 
 #define LAYOUT_base( \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, \
