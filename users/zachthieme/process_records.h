@@ -50,3 +50,15 @@
 #define BB2 LT(_NUMBERS,KC_TAB)
 #define BB3 LT(_NUMBERS,KC_ENTER)
 #define ZT_FLASH LT(_FLASH,KC_LBRACKET)
+
+// MACRO's for moving windows
+#define WIN_L23 LCTL(LALT(KC_P1))
+#define WIN_R23 LCTL(LALT(KC_P2))
+#define WIN_RB  LCTL(LALT(KC_P3))
+#define WIN_RT  LCTL(LALT(KC_P9))
+#define WIN_L3  LCTL(LALT(KC_P4))
+#define WIN_M3  LCTL(LALT(KC_P5))
+#define WIN_R3  LCTL(LALT(KC_P6))
+#define WIN_L2  LCTL(LALT(KC_LEFT))
+#define WIN_R2  LCTL(LALT(KC_RIGHT))
+#define WIN_MAX LCTL(LALT(KC_ENTER))

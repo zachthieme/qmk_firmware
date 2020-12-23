@@ -14,4 +14,5 @@ enum userspace_layers {
     _FLASH,
     _MALTRON,
     _MACROS,
+    _SCREEN
 };

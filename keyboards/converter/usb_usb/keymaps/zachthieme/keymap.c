@@ -2,6 +2,10 @@
 #include "zachthieme.h"
 #include "tapdance.h"
 
+
+// For some reason this layout is reversing the order of the replacement arrays.
+// i've reversed 31/30 and 33/32 in the layout to accomodate.
+
 #define LAYOUT_all_base( \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, \
     K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, K1B, \
@@ -15,7 +19,7 @@
     BB2,     K01,     K02,     K03,     K04,     K05,    K06,    K07,    K08,     K09,     K0A,     K0B,     KC_RBRC,          KC_BSLS,     KC_DEL,  KC_END,  KC_PGDN,    KC_P7,   KC_P8,   KC_P9,   KC_PPLS,    KC_MENU, KC_UNDO, \
     K10,     K11,     K12,     K13,     K14,     K15,    K16,    K17,    K18,     K19,     K1A,     K1B,     KC_NUHS, BB3,                                    KC_P4,   KC_P5,   KC_P6,   KC_PCMM,    KC_SLCT, KC_COPY, \
     K20,     KC_NUBS, K21,     K22,     K23,     K24,    K25,    K26,    K27,     K28,     K29,     K2A,     KC_RO,   K2B,                           KC_UP,               KC_P1,   KC_P2,   KC_P3,   KC_PEQL,    KC_EXEC, KC_PSTE, \
-    KC_LCTL, K30,     K31, KC_MHEN, KC_HANJ,         BB1,         KC_HAEN, KC_HENK, KC_KANA, K32, K33, KC_APP,  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_P0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT \
+    KC_LCTL, K31,     K30, KC_MHEN, KC_HANJ,         BB1,         KC_HAEN, KC_HENK, KC_KANA, K33, K32, KC_APP,  KC_RCTL,     KC_LEFT, KC_DOWN, KC_RGHT,    KC_P0,            KC_PDOT, KC_PENT,    KC_FIND, KC_CUT \
   )
 
 #define LAYOUT_all_base_wrapper(...)       LAYOUT_all_base(__VA_ARGS__)
@@ -50,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        __________________BLANK_6__________________, _________________NUMBER_R1_________________,
        __________________BLANK_6__________________, _________________NUMBER_R2_________________,
        __________________BLANK_6__________________, _________________NUMBER_R3_________________,
-       ___________________META_L__________________, ________________META_R_ALT_________________
+       ___________________META_L__________________, KC_TRANSPARENT, KC_ESCAPE
      ),
 
      [_NAVIGATION] = LAYOUT_all_base_wrapper(
@@ -65,5 +69,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        __________________BLANK_6__________________, _________________NUMBER_R2_________________,
        __________________BLANK_6__________________, ___________________FLASH___________________,
        ___________________META_L__________________, ___________________META_R__________________
+     ),
+     [_SCREEN] = LAYOUT_all_base_wrapper(
+       __________________BLANK_6__________________, _________________SCREEN_R1_________________,
+       __________________BLANK_6__________________, _________________SCREEN_R2_________________,
+       __________________BLANK_6__________________, _________________SCREEN_R3_________________,
+       ___________________META_L__________________, ___________________META_R__________________
      )
+
 };
