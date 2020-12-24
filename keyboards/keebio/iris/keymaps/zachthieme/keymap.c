@@ -34,21 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ADDED keyboard_post_init_user - seems to be get in a state where you can't get back to _NUMBERS
     // TO/TG doesn't seem to be working as expected
 
-    [_QWERTY] = LAYOUT_kc(
-    //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-       ESC , 1  , 2  , 3  , 4  , 5  ,                6  , 7  , 8  , 9  , 0  ,BSPC,
-    //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-       TAB , Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  , AA ,
-    //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-       LSFT, A  , S  , D  , F  , G  ,                H  , J  , K  , L  , OE , AE ,
-    //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-       LCTL, Z  , X  , C  , V  , B  ,DEL ,     BSPC, N  , M  ,COMM,DOT ,SLSH,MINS,
-    //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
-                         LGUI,V,SPC ,         ENT ,V,LALT
-    //                  `----+----+----'        `----+----+----'
-    )
   //
-  // [_NUMBERS] = LAYOUT_kc_base_wrapper(
+  // [_NUMBERS] = LAYOUT(
   //    __________________BLANK_6__________________,                          TO(_NUMBERS), TO(_NAVIGATION), OSL(_FLASH), KC_NO, _______, KC_BSPC,
   //    __________________BLANK_6__________________,                          _________________NUMBER_R1_________________,
   //    __________________BLANK_6__________________,                          _________________NUMBER_R2_________________,
@@ -57,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //
   // ),
   //
-  // [_NAVIGATION] = LAYOUT_kc_base_wrapper(
+  // [_NAVIGATION] = LAYOUT(
   //    __________________BLANK_6__________________,                         __________________BLANK_6__________________,
   //    __________________BLANK_6__________________,                         KC_HOME, _______, KC_UP, _______, _______, KC_END,
   //    __________________BLANK_6__________________,                         _______, _______, KC_DOWN, _______, DAV_ZOOM_IN, _______,
@@ -66,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //
   // ),
   //
-  // [_FLASH] = LAYOUT_kc_base_wrapper(
+  // [_FLASH] = LAYOUT(
   //    __________________BLANK_6__________________,                         KC_MAKE, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, RESET,
   //    __________________BLANK_6__________________,                         __________________BLANK_6__________________,
   //    __________________BLANK_6__________________,                         __________________BLANK_6__________________,

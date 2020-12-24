@@ -1,3 +1,5 @@
+
+
 uint16_t copy_paste_timer;
 
 __attribute__((weak))
@@ -25,7 +27,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             break;
+/*
+        case OS_COPY: //choose correct copy macro per OS
+         if (record->event.pressed) {
+           switch (switch_os_keys_mode(os_keys_mode)) {
+             case 0:
+                OS_MAC_COPY;
+                break;
+             case 1:
+                OS_PC_COPY;
+                break;
+           }
+         }
+         break;
 
+       case OS_PASTE: //choose correct copy macro per OS
+        if (record->event.pressed) {
+           switch (switch_os_keys_mode(os_keys_mode)) {
+            case 0:
+               OS_MAC_PASTE;
+               break;
+            case 1:
+               OS_PC_PASTE;
+               break;
+          }
+        }
+        break;
+*/
         case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
                 if (!record->event.pressed) {
     #ifndef MAKE_BOOTLOADER

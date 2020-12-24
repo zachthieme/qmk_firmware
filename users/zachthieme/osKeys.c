@@ -5,24 +5,24 @@
 #include "osKeys.h"
 
 uint8_t os_keys_mode = 0;
-
-const macro_t *osKeys(uint16_t keycode) {
-
-  switch (keycode)
-  {
-#define ENTRY(a,b,c) \
-  case a: SEND_STRING(b); break;
-  OS_KEY_MACRO
-#undef ENTRY
-
-    default:
-      return MACRO_NONE;
-      break;
-  }
-
-  return MACRO_NONE;
-}
-
+/*
+// const macro_t *osKeys(uint16_t keycode) {
+//
+//   switch (keycode)
+//   {
+// #define ENTRY(a,b,c) \
+//   case a: SEND_STRING(b); break;
+//   OS_KEY_MACRO
+// #undef ENTRY
+//
+//     default:
+//       return MACRO_NONE;
+//       break;
+//   }
+//
+//   return MACRO_NONE;
+// }
+*/
 uint8_t switch_os_keys_mode( uint8_t id) {
  os_keys_mode = id;
  return id;
