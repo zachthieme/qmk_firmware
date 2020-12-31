@@ -173,11 +173,11 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________SYMBOL_L2_________________        KC_TRNS,  KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_ASTR
 #define _________________SYMBOL_L3_________________        KC_TRNS,  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_AMPR
 
-#define ___________________NAV_R1__________________        KC_NO,           KC_MAC_PREWORD, KC_UP,    KC_MAC_NEXWORD, KC_NO,          KC_NO
-#define ___________________NAV_R2__________________        KC_MAC_BEGLINE,  KC_LEFT,        KC_DOWN,  KC_RIGHT,       KC_MAC_ENDLINE, KC_NO
-#define ___________________NAV_R3__________________        KC_MAC_HEAD,     KC_PGUP,        KC_PGDN,  KC_MAC_TAIL,    KC_NO,          KC_NO
+#define ___________________NAV_R1__________________        KC_NO,           KC_MAC_PREWORD, KC_UP,    KC_MAC_NEXWORD, KC_NO,          Z_KVM_1
+#define ___________________NAV_R2__________________        KC_MAC_BEGLINE,  KC_LEFT,        KC_DOWN,  KC_RIGHT,       KC_MAC_ENDLINE, Z_KVM_2
+#define ___________________NAV_R3__________________        KC_MAC_HEAD,     KC_PGUP,        KC_PGDN,  KC_MAC_TAIL,    KC_NO,          Z_KVM_3
 
-#define ___________________NAV_L2__________________        _______, _______, OS_SAVE, KC_BSPC, KC_DEL,   _______
+#define ___________________NAV_L2__________________        _______, KC_LEAD, OS_SAVE, KC_BSPC, KC_DEL,   _______
 #define ___________________NAV_L3__________________        _______, OS_CUT,  OS_UNDO, OS_COPY, OS_PASTE, _______
 
 #define ___________________FLASH___________________        KC_NO, KC_MAKE, KC_NO, KC_NO, KC_NO, RESET
