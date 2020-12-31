@@ -1,7 +1,6 @@
 // https://stackoverflow.com/questions/6635851/real-world-use-of-x-macros
 // https://stackoverflow.com/questions/147267/easy-way-to-use-variables-of-enum-types-as-string-in-c
 
-
 #include "osKeys.h"
 
 uint8_t os_keys_mode = 0;

@@ -1,6 +1,7 @@
 #include QMK_KEYBOARD_H
 #include "zachthieme.h"
 #include "tapdance.h"
+#include "osKeys.h"
 
 /* Ergodox EZ
  *
