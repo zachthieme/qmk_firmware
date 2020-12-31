@@ -1,6 +1,7 @@
 #include "zachthieme.h"
 
 uint16_t copy_paste_timer;
+uint8_t current_os = 1;
 
 __attribute__((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true; }
@@ -25,31 +26,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
         break;
 
-       //  case OS_COPY: //choose correct copy macro per OS
-       //   if (record->event.pressed) {
-       //     switch (os_keys_mode) {
-       //       case 0:
-       //          OS_MAC_COPY;
-       //          break;
-       //       case 1:
-       //          OS_PC_COPY;
-       //          break;
-       //     }
-       //   }
-       //   break;
-       //
-       // case OS_PASTE: //choose correct copy macro per OS
-       //  if (record->event.pressed) {
-       //     switch (os_keys_mode) {
-       //      case 0:
-       //         OS_MAC_PASTE;
-       //         break;
-       //      case 1:
-       //         OS_PC_PASTE;
-       //         break;
-       //    }
-       //  }
-       //  break;
+        case OS_COPY: //choose correct copy macro per OS
+         if (record->event.pressed) {
+           switch (current_os) {
+             case 2:
+                OS_MAC_COPY;
+                break;
+             case 1:
+                OS_PC_COPY;
+                break;
+           }
+         }
+         break;
+
+       case OS_PASTE: //choose correct copy macro per OS
+        if (record->event.pressed) {
+           switch (current_os) {
+            case 2:
+               OS_MAC_PASTE;
+               break;
+            case 1:
+               OS_PC_PASTE;
+               break;
+          }
+        }
+        break;
 
         case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
                 if (!record->event.pressed) {

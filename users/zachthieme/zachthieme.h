@@ -21,8 +21,10 @@ enum userspace_layers {
 // MACRO's for moving cursor around on the MAC
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
-#define OS_MAC_COPY LGUI(KC_C)
-#define OS_MAC_PASTE LGUI(KC_V)
+// #define OS_MAC_COPY LGUI(KC_C)
+#define OS_MAC_COPY SEND_STRING(SS_LGUI("c"))
+// #define OS_MAC_PASTE LGUI(KC_V)
+#define OS_MAC_PASTE SEND_STRING(SS_LGUI("v"))
 #define KC_MAC_PREWORD LALT(KC_LEFT)
 #define KC_MAC_NEXWORD LALT(KC_RIGHT)
 #define KC_MAC_BEGLINE LGUI(KC_LEFT)
@@ -35,8 +37,10 @@ enum userspace_layers {
 // MACRO's for moving cursor around on the PC
 #define KC_PC_UNDO LCTL(KC_Z)
 #define KC_PC_CUT LCTL(KC_X)
-#define OS_PC_COPY LCTL(KC_C)
-#define OS_PC_PASTE LCTL(KC_V)
+// #define OS_PC_COPY LCTL(KC_C)
+#define OS_PC_COPY SEND_STRING(SS_LCTL("c"))
+// #define OS_PC_PASTE LCTL(KC_V)
+#define OS_PC_PASTE SEND_STRING(SS_LCTL("v"))
 #define KC_PC_PREWORD LCTL(KC_LEFT)
 #define KC_PC_NEXWORD LCTL(KC_RIGHT)
 #define KC_PC_BEGLINE KC_HOME
