@@ -1,5 +1,4 @@
 #include "zachthieme.h"
-#include "osKeys.h"
 
 uint16_t copy_paste_timer;
 
@@ -10,6 +9,16 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true;
 // Defines actions tor my global custom keycodes. Defined in zachthieme.h file
 // Then runs the _keymap's record handier if not processed here
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+      #ifdef USE_BABBLEPASTE
+         if( keycode > BABBLE_START && keycode < BABBLE_END_RANGE )  {
+            if (record->event.pressed)  { // is there a case where this isn't desired?
+              babblePaste ( keycode );
+            } else{
+              return true;
+            }
+          }
+    #endif
+
     switch (keycode) {
         case KC_CCCV:  // One key copy/paste
             if (record->event.pressed) {
@@ -30,88 +39,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case Z_KVM_1:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "1");
-            switch_os_keys_mode(1);
+            set_babble_mode(BABL_WINDOWS_MODE);
           }
           break;
+
         case Z_KVM_2:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "2");
-            switch_os_keys_mode(2);
+            set_babble_mode(BABL_MAC_MODE);
           }
           break;
+
         case Z_KVM_3:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "3");
-            switch_os_keys_mode(1);
+            set_babble_mode(BABL_WINDOWS_MODE);
           }
           break;
-
-        case ACT_OS:
-          if (record->event.pressed) {
-            switch (os_keys_mode) {
-              case 2:
-                 SEND_STRING("mac");
-                 break;
-              case 1:
-                 SEND_STRING("win");
-                 break;
-            }
-          }
-          break;
-
-
-      case OS_IN: //choose correct copy macro per OS
-           if (record->event.pressed) {
-          switch (os_keys_mode) {
-            case 2:
-               OS_MAC_IN;
-               break;
-            case 1:
-               OS_PC_IN;
-               break;
-          }
-        }
-        break;
-
-        case OS_OUT: //choose correct copy macro per OS
-             if (record->event.pressed) {
-            switch (os_keys_mode) {
-              case 2:
-                 OS_MAC_OUT;
-                 break;
-              case 1:
-                 OS_PC_OUT;
-                 break;
-            }
-          }
-          break;
-
-
-        case OS_COPY: //choose correct copy macro per OS
-         if (record->event.pressed) {
-           switch (os_keys_mode) {
-             case 2:
-                OS_MAC_COPY;
-                break;
-             case 1:
-                OS_PC_COPY;
-                break;
-           }
-         }
-         break;
-
-       case OS_PASTE: //choose correct copy macro per OS
-        if (record->event.pressed) {
-           switch (os_keys_mode) {
-            case 2:
-               OS_MAC_PASTE;
-               break;
-            case 1:
-               OS_PC_PASTE;
-               break;
-          }
-        }
-        break;
 
         case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
                 if (!record->event.pressed) {

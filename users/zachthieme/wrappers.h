@@ -173,13 +173,13 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________SYMBOL_L2_________________        KC_TRNS,  KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_ASTR
 #define _________________SYMBOL_L3_________________        KC_TRNS,  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_AMPR
 
-#define ___________________NAV_R1__________________        KC_NO,           KC_MAC_PREWORD, KC_UP,    KC_MAC_NEXWORD, KC_NO,          Z_KVM_1
-#define ___________________NAV_R2__________________        KC_MAC_BEGLINE,  KC_LEFT,        KC_DOWN,  KC_RIGHT,       KC_MAC_ENDLINE, Z_KVM_2
-#define ___________________NAV_R3__________________        KC_MAC_HEAD,     KC_PGUP,        KC_PGDN,  KC_MAC_TAIL,    KC_NO,          Z_KVM_3
+#define ___________________NAV_R1__________________        KC_NO,              BABL_GO_LEFT_WORD, KC_UP,    BABL_GO_RIGHT_WORD, KC_NO,            Z_KVM_1
+#define ___________________NAV_R2__________________        BABL_GO_START_LINE, KC_LEFT,           KC_DOWN,  KC_RIGHT,           BABL_GO_END_LINE, Z_KVM_2
+#define ___________________NAV_R3__________________        BABL_GO_START_DOC,  KC_PGUP,           KC_PGDN,  _______,            BABL_GO_END_DOC,  Z_KVM_3
 
-#define ___________________NAV_L1__________________         _______,  _______,  OS_IN,   OS_OUT, _______,  _______
-#define ___________________NAV_L2__________________        ACT_OS,    _______,  OS_SAVE, KC_BSPC, KC_DEL,   _______
-#define ___________________NAV_L3__________________        _______,   OS_CUT,   OS_UNDO, OS_COPY, OS_PASTE, _______
+#define ___________________NAV_L1__________________        _______,   _______,         _______,       _______,   _______,    _______
+#define ___________________NAV_L2__________________        _______,   BABL_SELECT_ALL, _______, KC_BSPC,   KC_DEL,     _______
+#define ___________________NAV_L3__________________        _______,   BABL_UNDO,       BABL_CUT,      BABL_COPY, BABL_PASTE, _______
 
 #define ___________________FLASH___________________        KC_NO, KC_MAKE, KC_NO, KC_NO, KC_NO, RESET
 #define ___________________META_L__________________        KC_LGUI, ZT_FLASH
@@ -189,37 +189,5 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
 #define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
 #define _________________SCREEN_R3_________________        KC_TRNS, WIN_L23, WIN_R23, WIN_RB,  KC_TRNS, Z_KVM_3
-
-#define _________________NAV_WIN_R1________________        KC_NO,            KC_PC_PREWORD,  KC_UP,    KC_PC_NEXWORD, KC_NO,         KC_NO
-#define _________________NAV_WIN_R2________________        KC_PC_BEGLINE,    KC_LEFT,        KC_DOWN,  KC_RIGHT,      KC_PC_ENDLINE, KC_NO
-#define _________________NAV_WIN_R3________________        KC_PC_HEAD,       KC_PGUP,        KC_PGDN,  KC_PC_TAIL,    KC_NO,         KC_NO
-
-//
-// #define _________________LOWER_L1__________________        KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
-// #define _________________LOWER_L2__________________        _________________FUNC_LEFT_________________
-// #define _________________LOWER_L3__________________        _________________FUNC_RIGHT________________
-//
-// #define _________________LOWER_R1__________________        KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN
-// #define _________________LOWER_R2__________________        _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR
-// #define _________________LOWER_R3__________________        _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
-//
-//
-// #define _________________RAISE_L1__________________        ________________NUMBER_LEFT________________
-// #define _________________RAISE_L2__________________        ___________________BLANK___________________
-// #define _________________RAISE_L3__________________        ___________________BLANK___________________
-//
-// #define _________________RAISE_R1__________________        ________________NUMBER_RIGHT_______________
-// #define _________________RAISE_R2__________________        _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC
-// #define _________________RAISE_R3__________________        _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
-//
-//
-//
-// #define _________________ADJUST_L1_________________        RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_TOG
-// #define _________________ADJUST_L2_________________        MU_TOG , CK_TOGG, AU_ON,   AU_OFF,  CG_NORM
-// #define _________________ADJUST_L3_________________        RGB_RMOD,RGB_HUD,RGB_SAD, RGB_VAD, KC_RGB_T
-//
-// #define _________________ADJUST_R1_________________        KC_SEC1, KC_SEC2, KC_SEC3, KC_SEC4, KC_SEC5
-// #define _________________ADJUST_R2_________________        CG_SWAP, QWERTY,  COLEMAK, DVORAK,  WORKMAN
-// #define _________________ADJUST_R3_________________        MG_NKRO, KC_MUTE, KC_VOLD, KC_VOLU, KC_MNXT
 
 // clang-format on
