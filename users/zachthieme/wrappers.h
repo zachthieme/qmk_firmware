@@ -178,7 +178,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_R3__________________        KC_MAC_HEAD,     KC_PGUP,        KC_PGDN,  KC_MAC_TAIL,    KC_NO,          Z_KVM_3
 
 #define ___________________NAV_L1__________________         _______,  _______,  OS_IN,   OS_OUT, _______,  _______
-#define ___________________NAV_L2__________________        ACT_OS,    KC_LEAD,  OS_SAVE, KC_BSPC, KC_DEL,   _______
+#define ___________________NAV_L2__________________        ACT_OS,    _______,  OS_SAVE, KC_BSPC, KC_DEL,   _______
 #define ___________________NAV_L3__________________        _______,   OS_CUT,   OS_UNDO, OS_COPY, OS_PASTE, _______
 
 #define ___________________FLASH___________________        KC_NO, KC_MAKE, KC_NO, KC_NO, KC_NO, RESET
@@ -186,9 +186,9 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________META_R__________________        KC_MINS, KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, KC_TRANSPARENT
 
-#define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, KC_TRNS
-#define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  KC_TRNS
-#define _________________SCREEN_R3_________________        KC_TRNS, WIN_L23, WIN_R23, WIN_RB,  KC_TRNS, KC_TRNS
+#define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
+#define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
+#define _________________SCREEN_R3_________________        KC_TRNS, WIN_L23, WIN_R23, WIN_RB,  KC_TRNS, Z_KVM_3
 
 #define _________________NAV_WIN_R1________________        KC_NO,            KC_PC_PREWORD,  KC_UP,    KC_PC_NEXWORD, KC_NO,         KC_NO
 #define _________________NAV_WIN_R2________________        KC_PC_BEGLINE,    KC_LEFT,        KC_DOWN,  KC_RIGHT,      KC_PC_ENDLINE, KC_NO
