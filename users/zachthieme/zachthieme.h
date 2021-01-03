@@ -25,6 +25,8 @@ enum userspace_layers {
 #define OS_MAC_COPY SEND_STRING(SS_LGUI("c"))
 // #define OS_MAC_PASTE LGUI(KC_V)
 #define OS_MAC_PASTE SEND_STRING(SS_LGUI("v"))
+#define OS_MAC_IN SEND_STRING(SS_LGUI("["))
+#define OS_MAC_OUT SEND_STRING(SS_LGUI("]"))
 #define KC_MAC_PREWORD LALT(KC_LEFT)
 #define KC_MAC_NEXWORD LALT(KC_RIGHT)
 #define KC_MAC_BEGLINE LGUI(KC_LEFT)
@@ -41,6 +43,8 @@ enum userspace_layers {
 #define OS_PC_COPY SEND_STRING(SS_LCTL("c"))
 // #define OS_PC_PASTE LCTL(KC_V)
 #define OS_PC_PASTE SEND_STRING(SS_LCTL("v"))
+#define OS_PC_IN SEND_STRING(SS_LCTL("["))
+#define OS_PC_OUT SEND_STRING(SS_LCTL("]"))
 #define KC_PC_PREWORD LCTL(KC_LEFT)
 #define KC_PC_NEXWORD LCTL(KC_RIGHT)
 #define KC_PC_BEGLINE KC_HOME

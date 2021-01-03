@@ -58,6 +58,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           break;
 
+
+      case OS_IN: //choose correct copy macro per OS
+           if (record->event.pressed) {
+          switch (current_os) {
+            case 2:
+               OS_MAC_IN;
+               break;
+            case 1:
+               OS_PC_IN;
+               break;
+          }
+        }
+        break;
+
+        case OS_OUT: //choose correct copy macro per OS
+             if (record->event.pressed) {
+            switch (current_os) {
+              case 2:
+                 OS_MAC_OUT;
+                 break;
+              case 1:
+                 OS_PC_OUT;
+                 break;
+            }
+          }
+          break;
+
+
         case OS_COPY: //choose correct copy macro per OS
          if (record->event.pressed) {
            switch (current_os) {
