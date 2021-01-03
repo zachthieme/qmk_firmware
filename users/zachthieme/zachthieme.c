@@ -1,7 +1,8 @@
 #include "zachthieme.h"
+#include "osKeys.h"
 
 uint16_t copy_paste_timer;
-uint8_t current_os = 1;
+
 
 __attribute__((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true; }
@@ -29,25 +30,25 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case Z_KVM_1:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "1");
-            current_os = 1;
+            switch_os_keys_mode(1);
           }
           break;
         case Z_KVM_2:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "2");
-            current_os = 2;
+            switch_os_keys_mode(2);
           }
           break;
         case Z_KVM_3:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "3");
-            current_os = 1;
+            switch_os_keys_mode(1);
           }
           break;
 
         case ACT_OS:
           if (record->event.pressed) {
-            switch (current_os) {
+            switch (os_keys_mode) {
               case 2:
                  SEND_STRING("mac");
                  break;
@@ -61,7 +62,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
       case OS_IN: //choose correct copy macro per OS
            if (record->event.pressed) {
-          switch (current_os) {
+          switch (os_keys_mode) {
             case 2:
                OS_MAC_IN;
                break;
@@ -74,7 +75,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case OS_OUT: //choose correct copy macro per OS
              if (record->event.pressed) {
-            switch (current_os) {
+            switch (os_keys_mode) {
               case 2:
                  OS_MAC_OUT;
                  break;
@@ -88,7 +89,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case OS_COPY: //choose correct copy macro per OS
          if (record->event.pressed) {
-           switch (current_os) {
+           switch (os_keys_mode) {
              case 2:
                 OS_MAC_COPY;
                 break;
@@ -101,7 +102,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
        case OS_PASTE: //choose correct copy macro per OS
         if (record->event.pressed) {
-           switch (current_os) {
+           switch (os_keys_mode) {
             case 2:
                OS_MAC_PASTE;
                break;

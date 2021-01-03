@@ -18,7 +18,7 @@
 #include "zachthieme.h"
 #include "tapdance.h"
 
-// TODO: Figure out what to do with the the extra keys 
+// TODO: Figure out what to do with the the extra keys
 
 #define LAYOUT_ortho_5x15_base( \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, \
@@ -96,9 +96,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_NAVIGATION] = LAYOUT_ortho_5x15_base_wrapper(
-      __________________BLANK_6__________________, ___________________NAV_R1__________________,
+      ___________________NAV_L1__________________, ___________________NAV_R1__________________,
       ___________________NAV_L2__________________, ___________________NAV_R2__________________,
-      __________________BLANK_6__________________, ___________________NAV_R3__________________,
+      ___________________NAV_L3__________________, ___________________NAV_R3__________________,
       ___________________META_L__________________, ________________META_R_ALT_________________
     ),
 

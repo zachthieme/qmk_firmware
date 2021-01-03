@@ -1,6 +1,5 @@
 #pragma once
 #include QMK_KEYBOARD_H
-#include "zachthieme.h"
 #include "custom_keycodes.h"
 #include "version.h"
 #include "eeprom.h"
