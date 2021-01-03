@@ -29,5 +29,6 @@ OS_COPY,
 OS_SAVE,
 OS_UNDO,
 OS_PASTE,
+ACT_OS,
 NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 };

@@ -26,6 +26,38 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
         break;
 
+        case Z_KVM_1:
+          if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "1");
+            current_os = 1;
+          }
+          break;
+        case Z_KVM_2:
+          if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "2");
+            current_os = 2;
+          }
+          break;
+        case Z_KVM_3:
+          if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "3");
+            current_os = 1;
+          }
+          break;
+
+        case ACT_OS:
+          if (record->event.pressed) {
+            switch (current_os) {
+              case 2:
+                 SEND_STRING("mac");
+                 break;
+              case 1:
+                 SEND_STRING("win");
+                 break;
+            }
+          }
+          break;
+
         case OS_COPY: //choose correct copy macro per OS
          if (record->event.pressed) {
            switch (current_os) {
