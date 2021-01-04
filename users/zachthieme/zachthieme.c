@@ -1,8 +1,5 @@
 #include "zachthieme.h"
 
-uint16_t copy_paste_timer;
-
-
 __attribute__((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true; }
 
@@ -20,22 +17,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     #endif
 
     switch (keycode) {
-        case KC_CCCV:  // One key copy/paste
-            if (record->event.pressed) {
-                copy_paste_timer = timer_read();
-            } else {
-                if (timer_elapsed(copy_paste_timer) > TAPPING_TERM) {  // Hold, copy
-                    register_code(KC_LGUI);
-                    tap_code(KC_C);
-                    unregister_code(KC_LGUI);
-                } else {  // Tap, paste
-                    register_code(KC_LGUI);
-                    tap_code(KC_V);
-                    unregister_code(KC_LGUI);
-                }
-            }
-        break;
-
         case Z_KVM_1:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "1");
@@ -54,6 +35,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "3");
             set_babble_mode(BABL_WINDOWS_MODE);
+          }
+          break;
+
+        case FILE_MAIL:
+          if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(SS_LSFT("7")));
           }
           break;
 

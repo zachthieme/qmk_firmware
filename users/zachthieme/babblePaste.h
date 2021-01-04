@@ -105,6 +105,8 @@ enum babble_keycodes {
     BABL_DEL_TO_LINE_END,    // delete from cursor to end of line
     BABL_DEL_TO_LINE_START,  // delete from cursor to begining line
     BABL_MODE,               // print out string saying what mode we're in.
+    BABL_LEFTDENT,           // move left
+    BABL_RIGHTDENT,          // decrease indent
 #    endif
 #    ifdef BABL_OSKEYS
     BABL_UNDO,
@@ -134,6 +136,7 @@ enum babble_keycodes {
     BABL_LOCK,
     BABL_SCREENCAPTURE,
     BABL_SWITCH_KEYBOARD_LAYOUT,
+    BABL_APP_SAVE,
 #    endif
 #    ifdef BABL_BROWSER
     BABL_BROWSER_NEW_TAB,

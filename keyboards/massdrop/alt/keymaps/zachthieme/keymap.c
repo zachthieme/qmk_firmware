@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "zachthieme.h"
-#include "tapdance.h"
 
 /*
  * [X] = LAYOUT(

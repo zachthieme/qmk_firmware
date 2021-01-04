@@ -29,18 +29,3 @@
 
 //// What Browser shortcuts?
 #define BABL_BROWSER_CHROME // Chrome browser, Google apps
-//#define BABL_BROWSER_MS
-//#define BABL_BROWSER_SAFARI // Safari, Apple defaults.
-
-//// applications vary even more between OSes. We'll do our best.
-// #define BABL_APP
-// // To enable specific App options.
-// #define BABL_APP_CELLS // spreadsheets and tables
-// #define BABL_APP_EDITOR // Fancy editor commands
-// #define BABL_APP_WINDOWSPLITTING // splitting frames & windows
-
-//// What App keybinding is assumed?
-//#define BABL_APP_GOOGLE // Google office
-// #define BABL_APP_MSOFFICE // MS office
-// //#define BABL_APP_APPLE // Apple office
-// #define BABL_APP_SUBLIME

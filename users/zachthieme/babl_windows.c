@@ -63,7 +63,9 @@ bool babblePaste_win(uint16_t keycode) {
     BABLM(BABL_LOCK, SS_LGUI("l"));
     BABLM(BABL_SCREENCAPTURE, OMSFT(SS_LGUI("s")));
     BABLM(BABL_SWITCH_KEYBOARD_LAYOUT, IMGUI(X_SPACE));
-
+    BABLM(BABL_APP_SAVE, SS_LCTL("s"));
+    BABLM(BABL_LEFTDENT, SS_LCTL("["));
+    BABLM(BABL_RIGHTDENT, SS_LCTL("]"));
 #        endif
 
 #        ifdef BABL_BROWSER
