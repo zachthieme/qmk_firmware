@@ -27,8 +27,8 @@
 * |         |Close |Close | URL  | left |right |      |           |      | Zoom | Left |  Up  |Right | Zoom | KVM 1  |
 * |         |App   |Win   | Bar  | dent |dent  |      |           |      | In   | Word |      |Word  | Out  |        |
 * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-* | Del to  | Sel  | Save | Back | Del  |del to|      |           |      | Beg  | Left | Down |Right | End  | KVM 2  |
-* | beg lin | all  |      | spc  |      |end li|------|           |------| line |      |      |      | line |        |
+* |         | Sel  | Save | Back | Del  |      |      |           |      | Beg  | Left | Down |Right | End  | KVM 2  |
+* |         | all  |      | spc  |      |      |------|           |------| line |      |      |      | line |        |
 * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
 * |         | Undo | Cut  | Copy |Paste |      |      |           |      | Beg  | PgUp | PgDn |      | End  | KVM 3  |
 * |         |      |      |      |      |      |      |           |      | doc  |      |      |      | Doc  |        |
