@@ -14,8 +14,6 @@ enum userspace_layers {
     _QWERTY  = 0,
     _NAVIGATION,
     _NUMBERS,
-    _FLASH,
-    _MACROS,
     _SCREEN
 };
 
@@ -61,7 +59,6 @@ NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 #define BB1 LT(_NAVIGATION,KC_SPACE)
 #define BB2 LT(_NUMBERS,KC_TAB)
 #define BB3 LT(_NUMBERS,KC_ENTER)
-#define ZT_FLASH LT(_FLASH,KC_LBRACKET)
 
 // // MACRO's for moving windows on Mac
 #define WIN_L23 LCTL(LALT(KC_P1))

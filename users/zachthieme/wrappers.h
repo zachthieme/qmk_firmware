@@ -47,7 +47,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _______________QWERTY_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_C,          KC_V,          KC_B
 
 #define _______________QWERTY_MOD_R1_______________        KC_Y,              KC_U,              KC_I,          KC_O,         KC_P,          KC_BSLS
-#define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,              RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN), RCTL_T(KC_QUOT)
+#define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,              RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN), LT(_SCREEN, KC_QUOT)
 #define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
 #define _________________NUMBER_R1_________________        KC_P0,    KC_P7, KC_P8, KC_P9, KC_PPLS, KC_PAST
@@ -66,8 +66,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_L2__________________        BABL_DEL_TO_LINE_START, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,       BABL_DEL_TO_LINE_END
 #define ___________________NAV_L3__________________        _______,                BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE,   _______
 
-#define ___________________FLASH___________________        KC_NO, KC_MAKE, KC_NO, KC_NO, KC_NO, RESET
-#define ___________________META_L__________________        KC_LGUI, ZT_FLASH
+#define ___________________FLASH___________________        KC_MAKE, RESET, KC_NO,  KC_NO, KC_NO, KC_NO
+#define ___________________META_L__________________        KC_LGUI, KC_LBRACKET
 #define ___________________META_R__________________        KC_MINS, KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 
