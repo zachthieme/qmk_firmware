@@ -66,12 +66,12 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_L2__________________        BABL_DEL_TO_LINE_START, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,       BABL_DEL_TO_LINE_END
 #define ___________________NAV_L3__________________        _______,                BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE,   _______
 
-#define ___________________FLASH___________________        _______, KC_MAKE, RESET, KC_NO,  KC_NO, KC_NO
+#define ___________________FLASH___________________        _______, KC_MAKE, RESET, _______,  _______, _______
 #define ___________________META_L__________________        KC_LGUI, KC_LBRACKET
 #define ___________________META_R__________________        KC_MINS, KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 
-#define _________________DELETE_L2_________________        KC_TRNS, KC_TRNS, KC_TRNS, BABL_DEL_LEFT_WORD, BABL_DEL_RIGHT_WORD, KC_TRNS
+#define _________________DELETE_L2_________________        KC_TRNS, KC_TRNS, KC_TRNS, B_DLW, B_DRW, KC_TRNS
 
 #define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
 #define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
