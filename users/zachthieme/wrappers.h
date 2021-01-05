@@ -71,6 +71,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________META_R__________________        KC_MINS, KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 
+#define _________________DELETE_L2_________________        KC_TRNS, KC_TRNS, KC_TRNS, BABL_DEL_LEFT_WORD, BABL_DEL_RIGHT_WORD, KC_TRNS
+
 #define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
 #define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
 #define _________________SCREEN_R3_________________        KC_TRNS, WIN_L23, WIN_R23, WIN_RB,  KC_TRNS, Z_KVM_3

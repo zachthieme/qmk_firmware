@@ -82,8 +82,8 @@ enum babble_keycodes {
 #    ifdef BABL_MOVE
     // Movement macros
     // left & right
-    BABL_GO_LEFT_1C,
-    BABL_GO_RIGHT_1C,
+    // BABL_GO_LEFT_1C,
+    // BABL_GO_RIGHT_1C,
     BABL_GO_LEFT_WORD,
     BABL_GO_RIGHT_WORD,
     BABL_GO_START_LINE,
@@ -91,15 +91,15 @@ enum babble_keycodes {
     // now up & down
     BABL_GO_START_DOC,
     BABL_GO_END_DOC,
-    BABL_GO_NEXT_LINE,
-    BABL_GO_PREV_LINE,
-    BABL_GO_PARA_START,
-    BABL_GO_PARA_END,
-    BABL_PGDN,
-    BABL_PGUP,
+    // BABL_GO_NEXT_LINE,
+    // BABL_GO_PREV_LINE,
+    // BABL_GO_PARA_START,
+    // BABL_GO_PARA_END,
+    // BABL_PGDN,
+    // BABL_PGUP,
     // And the delete options
-    BABL_DEL_LEFT_1C,   // == backspace, so why bother?
-    BABL_DEL_RIGHT_1C,  // usually = Del
+    // BABL_DEL_LEFT_1C,   // == backspace, so why bother?
+    // BABL_DEL_RIGHT_1C,  // usually = Del
     BABL_DEL_LEFT_WORD,
     BABL_DEL_RIGHT_WORD,
     BABL_DEL_TO_LINE_END,    // delete from cursor to end of line
@@ -120,20 +120,20 @@ enum babble_keycodes {
     BABL_SWAP_LAST2W, // Swap the last two words before the cursor
     */
     // find & replace
-    BABL_FIND,
-    BABL_FIND_NEXT,
-    BABL_FIND_PREV,
-    BABL_FIND_REPLACE,
+    // BABL_FIND,
+    // BABL_FIND_NEXT,
+    // BABL_FIND_PREV,
+    // BABL_FIND_REPLACE,
     // GUI or app
-    BABL_RUNAPP,
-    BABL_SWITCH_APP_NEXT,
-    BABL_SWITCH_APP_LAST,  // previous
-    BABL_WINDOW_NEXT,
-    BABL_WINDOW_PREV,
-    BABL_WINDOW_NEW,
+    // BABL_RUNAPP,
+    // BABL_SWITCH_APP_NEXT,
+    // BABL_SWITCH_APP_LAST,  // previous
+    // BABL_WINDOW_NEXT,
+    // BABL_WINDOW_PREV,
+    // BABL_WINDOW_NEW,
     BABL_CLOSE_APP,
-    BABL_HELP,
-    BABL_LOCK,
+    // BABL_HELP,
+    // BABL_LOCK,
     BABL_SCREENCAPTURE,
     BABL_SWITCH_KEYBOARD_LAYOUT,
     BABL_APP_SAVE,
@@ -254,22 +254,22 @@ bool babblePaste_chromeos(uint16_t keycode);
 *****************************************************/
 
 #    ifdef BABL_MOVE
-#        define B_L1C BABL_GO_LEFT_1C
-#        define B_R1C BABL_GO_RIGHT_1C
+// #        define B_L1C BABL_GO_LEFT_1C
+// #        define B_R1C BABL_GO_RIGHT_1C
 #        define B_L1W BABL_GO_LEFT_WORD
 #        define B_R1W BABL_GO_RIGHT_WORD
 #        define B_GSOL BABL_GO_START_LINE
 #        define B_GEOL BABL_GO_END_LINE
-#        define B_GTOP BABL_GO_START_DOC
-#        define B_GEND BABL_GO_END_DOC
-#        define B_DOWN BABL_GO_NEXT_LINE
-#        define B_UP BABL_GO_PREV_LINE
-#        define B_PTOP BABL_GO_PARA_START
-#        define B_PEND BABL_GO_PARA_END
-#        define B_PGDN BABL_PGDN
-#        define B_PGUP BABL_PGUP
+// #        define B_GTOP BABL_GO_START_DOC
+// #        define B_GEND BABL_GO_END_DOC
+// #        define B_DOWN BABL_GO_NEXT_LINE
+// #        define B_UP BABL_GO_PREV_LINE
+// #        define B_PTOP BABL_GO_PARA_START
+// #        define B_PEND BABL_GO_PARA_END
+// #        define B_PGDN BABL_PGDN
+// #        define B_PGUP BABL_PGUP
 //#define B_BKSP  BABL_DEL_LEFT_1C == backspace so why bother.
-#        define B_DEL BABL_DEL_RIGHT_1C  // usually = Del
+// #        define B_DEL BABL_DEL_RIGHT_1C  // usually = Del
 #        define B_DLW BABL_DEL_LEFT_WORD
 #        define B_DRW BABL_DEL_RIGHT_WORD
 #        define B_DEOL BABL_DEL_TO_LINE_END    // delete from cursor to end of line
@@ -285,19 +285,19 @@ bool babblePaste_chromeos(uint16_t keycode);
 #        define B_PASTE BABL_PASTE
 #        define B_SELALL BABL_SELECT_ALL
 #        define B_SELA BABL_SELECT_ALL
-#        define B_FIND BABL_FIND
-#        define B_FINDN BABL_FIND_NEXT
-#        define B_FINDP BABL_FIND_PREV
-#        define B_RPLACE BABL_FIND_REPLACE
-#        define B_RUNAPP BABL_RUNAPP
-#        define B_NAPP BABL_SWITCH_APP_NEXT
-#        define B_PAPP BABL_SWITCH_APP_LAST  // previous
-#        define B_NWIN BABL_WINDOW_NEXT
-#        define B_PWIN BABL_WINDOW_PREV
-#        define B_WINN BABL_WINDOW_NEW
+// #        define B_FIND BABL_FIND
+// #        define B_FINDN BABL_FIND_NEXT
+// #        define B_FINDP BABL_FIND_PREV
+// #        define B_RPLACE BABL_FIND_REPLACE
+// #        define B_RUNAPP BABL_RUNAPP
+// #        define B_NAPP BABL_SWITCH_APP_NEXT
+// #        define B_PAPP BABL_SWITCH_APP_LAST  // previous
+// #        define B_NWIN BABL_WINDOW_NEXT
+// #        define B_PWIN BABL_WINDOW_PREV
+// #        define B_WINN BABL_WINDOW_NEW
 #        define B_CAPP BABL_CLOSE_APP
-#        define B_HELP BABL_HELP
-#        define B_LOCK BABL_LOCK
+// #        define B_HELP BABL_HELP
+// #        define B_LOCK BABL_LOCK
 #        define B_SCAP BABL_SCREENCAPTURE
 #        define B_KEYB BABL_SWITCH_KEYBOARD_LAYOUT
 #    endif
