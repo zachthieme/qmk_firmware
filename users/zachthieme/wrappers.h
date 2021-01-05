@@ -62,16 +62,16 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_R2__________________        BABL_GO_START_LINE,   KC_LEFT,           KC_DOWN,  KC_RIGHT,           BABL_GO_END_LINE,      Z_KVM_2
 #define ___________________NAV_R3__________________        BABL_GO_START_DOC,    KC_PGUP,           KC_PGDN,  _______,            BABL_GO_END_DOC,       Z_KVM_3
 
-#define ___________________NAV_L1__________________        _______,                BABL_CLOSE_APP,  BABL_BROWSER_CLOSE_TAB, BABL_BROWSER_URL_BAR, BABL_LEFTDENT, BABL_RIGHTDENT
-#define ___________________NAV_L2__________________        BABL_DEL_TO_LINE_START, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,       BABL_DEL_TO_LINE_END
-#define ___________________NAV_L3__________________        _______,                BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE,   _______
+#define ___________________NAV_L1__________________        _______, BABL_CLOSE_APP,  BABL_BROWSER_CLOSE_TAB, BABL_BROWSER_URL_BAR, BABL_LEFTDENT, BABL_RIGHTDENT
+#define ___________________NAV_L2__________________        _______, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,        _______
+#define ___________________NAV_L3__________________        _______, BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE,    _______
 
 #define ___________________FLASH___________________        _______, KC_MAKE, RESET, _______,  _______, _______
 #define ___________________META_L__________________        KC_LGUI, KC_LBRACKET
 #define ___________________META_R__________________        KC_MINS, KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 
-#define _________________DELETE_L2_________________        KC_TRNS, KC_TRNS, KC_TRNS, B_DLW, B_DRW, KC_TRNS
+#define _________________DELETE_L2_________________        KC_TRNS, BABL_DEL_TO_LINE_START, B_DLW, B_DRW, BABL_DEL_TO_LINE_END, KC_TRNS
 
 #define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
 #define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
