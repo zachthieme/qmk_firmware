@@ -67,9 +67,9 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________NUMBER_R3_________________        KC_PDOT, KC_1, KC_2, KC_3, KC_0,    KC_PEQL
 #define _________________NUMBER_R4_________________        KC_0,    KC_PDOT
 
-#define ___________________NAV_L1__________________        _______, BABL_CLOSE_APP,  BABL_BROWSER_CLOSE_TAB, BABL_BROWSER_URL_BAR, BABL_LEFTDENT, BABL_RIGHTDENT
-#define ___________________NAV_L2__________________        _______, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,        _______
-#define ___________________NAV_L3__________________        _______, BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE,    _______
+#define ___________________NAV_L1__________________        _______, BABL_CLOSE_APP,  BABL_BROWSER_CLOSE_TAB, BABL_BROWSER_URL_BAR, B_BRLD,     B_NTAB
+#define ___________________NAV_L2__________________        _______, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,     BABL_LEFTDENT
+#define ___________________NAV_L3__________________        _______, BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE, BABL_RIGHTDENT
 
 #define ___________________NAV_R1__________________        B_ZIN,  B_L1W,   KC_UP,    B_R1W,    B_ZOUT, Z_KVM_1
 #define ___________________NAV_R2__________________        B_GSOL, KC_LEFT, KC_DOWN,  KC_RIGHT, B_GEOL, Z_KVM_2
