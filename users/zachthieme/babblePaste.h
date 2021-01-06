@@ -130,7 +130,7 @@ enum babble_keycodes {
     // BABL_SWITCH_APP_LAST,  // previous
     // BABL_WINDOW_NEXT,
     // BABL_WINDOW_PREV,
-    // BABL_WINDOW_NEW,
+    BABL_WINDOW_NEW,
     BABL_CLOSE_APP,
     // BABL_HELP,
     // BABL_LOCK,
@@ -294,7 +294,7 @@ bool babblePaste_chromeos(uint16_t keycode);
 // #        define B_PAPP BABL_SWITCH_APP_LAST  // previous
 // #        define B_NWIN BABL_WINDOW_NEXT
 // #        define B_PWIN BABL_WINDOW_PREV
-// #        define B_WINN BABL_WINDOW_NEW
+#        define B_WINN BABL_WINDOW_NEW
 #        define B_CAPP BABL_CLOSE_APP
 // #        define B_HELP BABL_HELP
 // #        define B_LOCK BABL_LOCK
