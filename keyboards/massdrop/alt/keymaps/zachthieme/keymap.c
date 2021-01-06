@@ -10,8 +10,8 @@
  *    _______, _______, _______,                            _______,                            _______, _______, _______, _______, _______  \
  * ),
 */
-
-// TODO: figure out why this binaryas bricks the keyboard
+   
+// TODO: figure out why this binary bricks the keyboard
 //  the internet seems to believe this is an issue due to QMK and ALT not using the same version of QMK
 //  the binary size of my alt is 1400k which is way too small
 
@@ -26,7 +26,7 @@
     BB2,     K01,  K02,     K03,     K04,     K05,     K06,     K07,     K08,      K09,       K0A,     K0B,        KC_RBRC, KC_BSLS, KC_HOME, \
     K10,     K11,  K12,     K13,     K14,     K15,     K16,     K17,     K18,      K19,       K1A,     K1B,                 BB3,     KC_PGUP, \
     K20,     K21,  K22,     K23,     K24,     K25,     K26,     K27,     K28,      K29,       K2A,     K2B,                 KC_UP,   KC_PGDN, \
-    KC_LCTL, K30,  K31,                 BB1,                                       K32,       K33,                 KC_LEFT, KC_DOWN, KC_RGHT  \
+    KC_LCTL, K30,  K31,                                BB1,                                   K32,     K33,        KC_LEFT, KC_DOWN, KC_RGHT  \
 )
 
 #define LAYOUT_base_wrapper(...)       LAYOUT_base(__VA_ARGS__)
@@ -38,6 +38,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______________QWERTY_MOD_L3_______________, _______________QWERTY_MOD_R3_______________,
     ___________________META_L__________________, ___________________META_R__________________
     ),
+
+  [_WORKMAN] = LAYOUT_base_wrapper(
+    ______________WORKMAN_MOD_L1_______________, ______________WORKMAN_MOD_R1_______________,
+    ______________WORKMAN_MOD_L2_______________, ______________WORKMAN_MOD_R2_______________,
+    ______________WORKMAN_MOD_L3_______________, ______________WORKMAN_MOD_R3_______________,
+    ___________________META_L__________________, ___________________META_R__________________
+  ),
 
   [_NUMBERS] = LAYOUT_base_wrapper(
     _________________SYMBOL_L1_________________, _________________NUMBER_R1_________________,

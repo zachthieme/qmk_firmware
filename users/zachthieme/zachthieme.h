@@ -12,6 +12,7 @@
 /* Define layer names */
 enum userspace_layers {
     _QWERTY  = 0,
+    _WORKMAN,
     _NAVIGATION,
     _NUMBERS,
     _SCREEN
@@ -29,6 +30,8 @@ enum userspace_layers {
 
 enum userspace_custom_keycodes {
 VRSN = BABBLE_END_RANGE,  // Prints QMK Firmware and board info
+KC_QWERTY,
+KC_WORKMAN,
 KC_MAKE,        // Run keyboard's customized make command
 KC_CCCV,        // Hold to copy, tap to paste
 Z_KVM_1,        // KVM swithing command

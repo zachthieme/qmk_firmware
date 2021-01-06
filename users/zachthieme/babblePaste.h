@@ -260,8 +260,8 @@ bool babblePaste_chromeos(uint16_t keycode);
 #        define B_R1W BABL_GO_RIGHT_WORD
 #        define B_GSOL BABL_GO_START_LINE
 #        define B_GEOL BABL_GO_END_LINE
-// #        define B_GTOP BABL_GO_START_DOC
-// #        define B_GEND BABL_GO_END_DOC
+#        define B_GTOP BABL_GO_START_DOC
+#        define B_GEND BABL_GO_END_DOC
 // #        define B_DOWN BABL_GO_NEXT_LINE
 // #        define B_UP BABL_GO_PREV_LINE
 // #        define B_PTOP BABL_GO_PARA_START

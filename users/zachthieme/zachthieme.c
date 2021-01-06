@@ -17,6 +17,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     #endif
 
     switch (keycode) {
+        case KC_QWERTY ... KC_WORKMAN:
+          if (record->event.pressed) {
+            uint8_t mods = mod_config(get_mods() | get_oneshot_mods());
+            if (!mods) {
+              set_single_persistent_default_layer(keycode - KC_QWERTY);
+            }
+          }
+          break;
+
         case Z_KVM_1:
           if (record->event.pressed) {
             SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "1");
