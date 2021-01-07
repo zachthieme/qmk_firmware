@@ -73,7 +73,7 @@ NOTE: These are all the same length.  If you do a search/replace
 
 #define ___________________NAV_R1__________________        B_ZIN,  B_L1W,   KC_UP,    B_R1W,    B_ZOUT, Z_KVM_1
 #define ___________________NAV_R2__________________        B_GSOL, KC_LEFT, KC_DOWN,  KC_RIGHT, B_GEOL, Z_KVM_2
-#define ___________________NAV_R3__________________        B_WINN, KC_PGUP, KC_PGDN,  _______, _______, Z_KVM_3
+#define ___________________NAV_R3__________________        B_WINN, KC_PGUP, KC_PGDN,  _______,  B_BFND, Z_KVM_3
 
 #define _________________DELETE_L2_________________        KC_TRNS, B_DSOL, B_DLW, B_DRW, B_DEOL, KC_TRNS
 

@@ -31,8 +31,8 @@
 * |         | Sel  | Save | Back | Del  |Left  |      |           |      | Beg  | Left | Down |Right | End  | KVM 2  |
 * |         | all  |      | spc  |      |dent  |------|           |------| line |      |      |      | line |        |
 * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-* |         | Undo | Cut  | Copy |Paste |right |      |           |      | New  | PgUp | PgDn |      |      | KVM 3  |
-* |         |      |      |      |      |dent  |      |           |      |      |      |      |      |      |        |
+* |         | Undo | Cut  | Copy |Paste |right |      |           |      | New  | PgUp | PgDn |      | Find | KVM 3  |
+* |         |      |      |      |      |dent  |      |           |      |      |      |      |      |in doc|        |
 * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
 *   |       |      |      | GUI  | [      |                                   |  Esc   | File |      |      |        |
 *   |       |      |      |      |        |                                   |        | Mail |      |      |        |
