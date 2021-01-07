@@ -42,7 +42,7 @@ NOTE: These are all the same length.  If you do a search/replace
 // ZachThieme Additions
 #define __________________BLANK_6__________________        _______, _______, _______, _______, _______, _______
 
-#define _______________QWERTY_MOD_L1_______________        KC_ESC,            KC_Q,              KC_W,          KC_E,          KC_R,          KC_T
+#define _______________QWERTY_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_W,          KC_E,          KC_R,          KC_T
 #define _______________QWERTY_MOD_L2_______________        LT(_SCREEN, KC_DELETE),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    KC_F,          KC_G
 #define _______________QWERTY_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_C,          KC_V,          KC_B
 
@@ -50,7 +50,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,              RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN), LT(_SCREEN, KC_QUOT)
 #define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
-#define ______________WORKMAN_MOD_L1_______________        KC_ESC,            KC_Q,              KC_D,          KC_R,          KC_W,          KC_B
+#define ______________WORKMAN_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_D,          KC_R,          KC_W,          KC_B
 #define ______________WORKMAN_MOD_L2_______________        LT(_SCREEN, KC_DELETE),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_H),    KC_T,          KC_G
 #define ______________WORKMAN_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_M,          KC_C,          KC_V
 
@@ -58,8 +58,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ______________WORKMAN_MOD_R2_______________        KC_Y,              KC_N,              RALT_T(KC_E),  RCTL_T(KC_O), RGUI_T(KC_I), LT(_SCREEN, KC_QUOT)
 #define ______________WORKMAN_MOD_R3_______________        KC_K,              KC_L,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
-#define _________________SYMBOL_L1_________________        KC_TRNS,  KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE
-#define _________________SYMBOL_L2_________________        KC_TRNS,  KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_ASTR
+#define _________________SYMBOL_L1_________________        KC_TRNS,  KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_PIPE
+#define _________________SYMBOL_L2_________________        KC_TRNS,  KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_ASTR
 #define _________________SYMBOL_L3_________________        KC_TRNS,  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_AMPR
 
 #define _________________NUMBER_R1_________________        KC_0,    KC_7, KC_8, KC_9, KC_PPLS, KC_PAST
