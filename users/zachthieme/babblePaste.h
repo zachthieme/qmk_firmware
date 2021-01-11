@@ -107,6 +107,7 @@ enum babble_keycodes {
     BABL_MODE,               // print out string saying what mode we're in.
     BABL_LEFTDENT,           // move left
     BABL_RIGHTDENT,          // decrease indent
+    BABL_CANCEL,
 #    endif
 #    ifdef BABL_OSKEYS
     BABL_UNDO,

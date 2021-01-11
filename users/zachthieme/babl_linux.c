@@ -63,6 +63,7 @@ bool babblePaste_linux(uint16_t keycode) {
     // BABLM(BABL_LOCK, OMCTL(IMALT(X_L)));
     BABLM(BABL_SCREENCAPTURE, IMSFT(X_PSCREEN));
     BABLM(BABL_APP_SAVE, SS_LCTL("s"));
+    BABLM(BABL_CANCEL, SS_LCTL("c"));
 #        endif
 #        ifdef BABL_BROWSER
     BABLM(BABL_BROWSER_NEW_TAB, SS_LCTL("t"));

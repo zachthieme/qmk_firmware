@@ -66,6 +66,7 @@ bool babblePaste_win(uint16_t keycode) {
     BABLM(BABL_APP_SAVE, SS_LCTL("s"));
     BABLM(BABL_LEFTDENT, SS_LCTL("["));
     BABLM(BABL_RIGHTDENT, SS_LCTL("]"));
+    BABLM(BABL_CANCEL, SS_LCTL("c"));
 #        endif
 
 #        ifdef BABL_BROWSER
