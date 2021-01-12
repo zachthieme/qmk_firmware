@@ -15,6 +15,8 @@
 #endif
 */
 
+#define TAPPING_TERM_PER_KEY
+
 #define USE_BABBLEPASTE
 
 //// Uncomment the modes you want to enable
