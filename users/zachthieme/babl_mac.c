@@ -15,22 +15,13 @@ and https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/keymaps/jee
 #    ifdef BABL_MAC
 
 bool babblePaste_mac(uint16_t keycode) {
-#        ifdef BABL_MOVE
-    // BABLM(BABL_GO_LEFT_1C, SS_TAP(X_LEFT));
-    // BABLM(BABL_GO_RIGHT_1C, SS_TAP(X_RIGHT));
+#        ifdef BABL_MOVE 
     BABLM(BABL_GO_LEFT_WORD, IMALT(X_LEFT));
     BABLM(BABL_GO_RIGHT_WORD, IMALT(X_RIGHT));
     BABLM(BABL_GO_START_LINE, IMGUI(X_LEFT));
     BABLM(BABL_GO_END_LINE, IMGUI(X_RIGHT));
     BABLM(BABL_GO_START_DOC, IMGUI(X_UP));
     BABLM(BABL_GO_END_DOC, IMGUI(X_DOWN));
-    // BABLM(BABL_GO_NEXT_LINE, SS_TAP(X_DOWN));
-    // BABLM(BABL_GO_PREV_LINE, SS_TAP(X_UP));
-    // BABLM(BABL_GO_PARA_START, IMALT(X_UP));
-    // BABLM(BABL_DEL_RIGHT_1C, SS_TAP(X_DELETE));
-    // BABLM(BABL_GO_PARA_END, IMALT(X_DOWN));
-    // BABLM(BABL_PGDN, SS_TAP(X_PGDOWN));
-    // BABLM(BABL_PGUP, SS_TAP(X_PGUP));
     BABLM(BABL_DEL_LEFT_WORD, IMALT(X_BSPACE));
     BABLM(BABL_DEL_RIGHT_WORD, IMALT(X_DELETE));
     BABLM(BABL_DEL_TO_LINE_END, OMSFT(IMGUI(X_RIGHT)) SS_TAP(X_BSPACE));  // this is more app agnostic than ctrl-k
@@ -44,31 +35,12 @@ bool babblePaste_mac(uint16_t keycode) {
     BABLM(BABL_COPY, SS_LGUI("c"));
     BABLM(BABL_PASTE, SS_LGUI("v"));
     BABLM(BABL_SELECT_ALL, SS_LGUI("a"));
-    // BABLM(BABL_FIND, SS_LGUI("f"));
-    // BABLM(BABL_FIND_NEXT, SS_LGUI("g"));
-    // BABLM( BABL_FIND_NEXT, 	OMSFT(X_F4)) ); // Mac office
-    // BABLM(BABL_FIND_PREV, OMSFT(IMGUI(X_G)));  // Sublime, browser
-    // BABLM(BABL_FIND_PREV, SS_LGUI("g"));
-    // BABLM(BABL_FIND_REPLACE, SS_LGUI("f"));
-    // BABLM(BABL_RUNAPP, SS_LGUI(" "));
-    // BABLM(BABL_SWITCH_APP_NEXT, IMGUI(X_TAB));
-    // BABLM(BABL_SWITCH_APP_LAST, OMSFT(IMGUI(X_TAB)));
     BABLM(BABL_APP_SAVE, SS_LGUI("s"));
     BABLM(BABL_LEFTDENT, SS_LGUI("["));
     BABLM(BABL_RIGHTDENT, SS_LGUI("]"));
     BABLM(BABL_CANCEL, SS_LCTL("c"));
-    // Apps vary, but this is  usually tab movement, same as B_NXTB
-    /*
-    BABLM( BABL_WINDOW_NEXT, OMSFT(IMGUI(X_RBRACKET)) ); // GUI Grav isn't everywhere
-    BABLM( BABL_WINDOW_PREV, OMSFT(IMGUI(X_LBRACKET)) );
-    */
-    // BABLM(BABL_WINDOW_NEXT, IMGUI(X_GRAVE));
-    // BABLM(BABL_WINDOW_PREV, OMSFT(IMGUI(X_GRAVE)));
     BABLM(BABL_WINDOW_NEW, IMGUI(X_N));
     BABLM(BABL_CLOSE_APP, SS_LGUI("q"));
-    // BABLM(BABL_HELP, OMSFT(IMGUI(X_SLASH)));
-    // Locking screen from external keyboard requires automator https://apple.stackexchange.com/questions/73995
-    // BABLM(BABL_LOCK, OMCTL(IMALT(X_L)));
     BABLM(BABL_SCREENCAPTURE, OMSFT(OMGUI(IMALT(X_4))) IMGUI(X_SPACE) "preview" SS_LGUI("d"));
     BABLM(BABL_SWITCH_KEYBOARD_LAYOUT, IMCTL(X_SPACE));
 #        endif
@@ -96,57 +68,6 @@ bool babblePaste_mac(uint16_t keycode) {
                                                      // BABLM( BABL_BROWSER_DEV_TOOLS,	// No real equivalent for Safari
 #            endif
 #        endif  //  BABL_BROWSER
-
-#        ifdef BABL_APP
-    BABLM(BABL_APP_SAVE, SS_LGUI("s"));
-#            ifdef BABL_APP_EDITOR
-#                ifdef BABL_APP_SUBLIME
-    BABLM(BABL_APP_MULTI_SELECT, OMCTL(IMGUI(X_G)));  // add all occurences of current word to select.
-    BABLM(BABL_APP_PASTE_VALUES, OMSFT(IMGUI(X_V)));  // paste with proper indenting.
-#                endif                                // sublime
-#            endif                                    // editor
-
-#            ifdef BABL_APP_CELLS
-#                ifdef BABL_APP_MSOFFICE
-    BABLM(BABL_APP_CENTER_ALIGN, IMGUI(X_E));
-    // BABLM( BABL_APP_CLEAR_FORMATTING, 	OMCTL(IMGUI(X_G)) ); // this isn't native. https://support.office.com/en-us/article/Clear-all-text-formatting-C094C4DA-7F09-4CEA-9A8D-C166949C9C80#OfficeVersion=macOS
-    BABLM(BABL_APP_SCROLL_ACTIVE_CELL, IMCTL(X_BSPACE));
-    BABLM(BABL_NEWLINE_IN_CELL, IMALT(X_ENTER));
-    BABLM(BABL_INSERT_COMMENT, IMSFT(X_F2));
-    BABLM(BABL_INSERT_COL_LEFT, IMCTL(X_I));
-    BABLM(BABL_INSERT_ROW, OMCTL(IMSFT(X_KP_PLUS)));
-    BABLM(BABL_DELETE_ROW, IMCTL(X_KP_MINUS));
-    BABLM(BABL_SELECT_COL, IMCTL(X_SPACE));
-    BABLM(BABL_SELECT_ROW, IMSFT(X_SPACE));
-#                endif  // BABL_APP_MSOFFICE
-
-#                ifdef BABL_APP_GOOGLE
-    BABLM(BABL_APP_CENTER_ALIGN, OMSFT(IMGUI(X_E)));
-    BABLM(BABL_APP_SCROLL_ACTIVE_CELL, IMCTL(X_BSPACE));
-    BABLM(BABL_NEWLINE_IN_CELL, IMALT(X_ENTER));
-    BABLM(BABL_INSERT_COMMENT, IMSFT(X_F2));
-    BABLM(BABL_APP_CLEAR_FORMATTING, IMGUI(X_BSLASH));
-    BABLM(BABL_DELETE_ROW, OMCTL(IMGUI(X_G)));
-    BABLM(BABL_INSERT_COL_LEFT, OMALT(IMCTL(X_I)) "c");  // o for to the right.
-    BABLM(BABL_INSERT_ROW, OMALT(IMCTL(X_I)) "b");       // r for above.
-    BABLM(BABL_SELECT_COL, IMCTL(X_SPACE));
-    BABLM(BABL_SELECT_ROW, IMSFT(X_SPACE));
-    BABLM(BABL_DELETE_ROW, OMALT(IMCTL(X_KP_MINUS)));  // once selected
-#                endif                                 // BABL_APP_GOOGLE
-/*
-#ifdef BABL_APP_APPLE
-    // you're on your own.
-#endif
-*/
-#            endif  // BABL_APP_CELLS
-
-#            ifdef BABL_APP_WINDOWSPLITTING
-    // These are for os X terminal, and are pretty useless.
-    BABLM(BABL_SPLIT_FRAME_HORIZONTAL, SS_LGUI("d"));
-    BABLM(BABL_UNSPLIT_FRAME_HORIZONTAL, OMSFT(IMGUI(X_D)));
-#            endif  // BABL_APP_WINDOWSPLITTING
-
-#        endif  // BABL_APP
 
     // Todo, ring bell, flash light, show user this isn't supported
     return false;
