@@ -58,16 +58,6 @@ bool babblePaste(uint16_t keycode) {
     }
 #    endif
 
-#    ifdef BABL_VI
-    if (keycode == BABL_DO_VI) {
-        set_babble_mode(BABL_VI_MODE);
-        babble_led_user();
-        return true;
-    }
-    if (babble_mode == BABL_VI_MODE) {
-        babblePaste_vi(keycode);
-    }
-#    endif
 #    ifdef BABL_WINDOWS
     if (keycode == BABL_DO_WINDOWS) {
         set_babble_mode(BABL_WINDOWS_MODE);
@@ -86,36 +76,6 @@ bool babblePaste(uint16_t keycode) {
     }
     if (babble_mode == BABL_LINUX_MODE) {
         babblePaste_linux(keycode);
-    }
-#    endif
-#    ifdef BABL_EMACS
-    if (keycode == BABL_DO_EMACS) {
-        set_babble_mode(BABL_EMACS_MODE);
-        babble_led_user();
-        return true;
-    }
-    if (babble_mode == BABL_EMACS_MODE) {
-        babblePaste_emacs(keycode);
-    }
-#    endif
-#    ifdef BABL_CHROME
-    if (keycode == BABL_DO_CHROMEOS) {
-        set_babble_mode(BABL_CHROMEOS_MODE);
-        babble_led_user();
-        return true;
-    }
-    if (babble_mode == BABL_CHROMEOS_MODE) {
-        babblePaste_readmux(keycode);
-    }
-#    endif
-#    ifdef BABL_READMUX
-    if (keycode == BABL_DO_READMUX) {
-        set_babble_mode(BABL_READMUX_MODE);
-        babble_led_user();
-        return true;
-    }
-    if (babble_mode == BABL_READMUX_MODE) {
-        babblePaste_readmux(keycode);
     }
 #    endif
 

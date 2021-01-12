@@ -23,23 +23,11 @@ enum babble_modes {
 #    ifdef BABL_MAC
     BABL_MAC_MODE,
 #    endif
-#    ifdef BABL_READMUX
-    BABL_READMUX_MODE,
-#    endif
 #    ifdef BABL_WINDOWS
     BABL_WINDOWS_MODE,
 #    endif
-#    ifdef BABL_VI
-    BABL_VI_MODE,
-#    endif
 #    ifdef BABL_LINUX
     BABL_LINUX_MODE,
-#    endif
-#    ifdef BABL_EMACS
-    BABL_EMACS_MODE,
-#    endif
-#    ifdef BABL_CHROMEOS
-    BABL_CHROMEOS_MODE,
 #    endif
     BABL_MODEMAX
 };
@@ -84,8 +72,6 @@ enum babble_keycodes {
     BABL_GO_RIGHT_WORD,
     BABL_GO_START_LINE,
     BABL_GO_END_LINE,
-    BABL_GO_START_DOC,
-    BABL_GO_END_DOC,
     BABL_DEL_LEFT_WORD,
     BABL_DEL_RIGHT_WORD,
     BABL_DEL_TO_LINE_END,    // delete from cursor to end of line
@@ -111,20 +97,11 @@ enum babble_keycodes {
 #    ifdef BABL_BROWSER
     BABL_BROWSER_NEW_TAB,
     BABL_BROWSER_CLOSE_TAB,
-    BABL_BROWSER_REOPEN_LAST_TAB,
-    BABL_BROWSER_NEXT_TAB,
-    BABL_BROWSER_PREV_TAB,
     BABL_BROWSER_URL_BAR,
-    BABL_BROWSER_FORWARD,
-    BABL_BROWSER_BACK,
-    BABL_BROWSER_FIND,
-    BABL_BROWSER_BOOKMARK,
-    BABL_BROWSER_DEV_TOOLS,  // hard one to remember
     BABL_BROWSER_RELOAD,
-    BABL_BROWSER_FULLSCREEN,
     BABL_BROWSER_ZOOM_IN,
     BABL_BROWSER_ZOOM_OUT,
-    BABL_BROWSER_VIEWSRC,
+    BABL_BROWSER_FIND,
 #    endif
 
 // Macros for mode switching
@@ -170,8 +147,6 @@ bool babblePaste_linux(uint16_t keycode);
 #        define B_R1W BABL_GO_RIGHT_WORD
 #        define B_GSOL BABL_GO_START_LINE
 #        define B_GEOL BABL_GO_END_LINE
-#        define B_GTOP BABL_GO_START_DOC
-#        define B_GEND BABL_GO_END_DOC
 #        define B_DLW BABL_DEL_LEFT_WORD
 #        define B_DRW BABL_DEL_RIGHT_WORD
 #        define B_DEOL BABL_DEL_TO_LINE_END    // delete from cursor to end of line
@@ -196,19 +171,11 @@ bool babblePaste_linux(uint16_t keycode);
 #    ifdef BABL_BROWSER
 #        define B_NTAB BABL_BROWSER_NEW_TAB
 #        define B_CTAB BABL_BROWSER_CLOSE_TAB
-#        define B_ROTB BABL_BROWSER_REOPEN_LAST_TAB
-#        define B_NXTB BABL_BROWSER_NEXT_TAB
-#        define B_PTAB BABL_BROWSER_PREV_TAB
 #        define B_NURL BABL_BROWSER_URL_BAR
-#        define B_BFWD BABL_BROWSER_FORWARD
-#        define B_BBAK BABL_BROWSER_BACK
-#        define B_BFND BABL_BROWSER_FIND
-#        define B_BOOK BABL_BROWSER_BOOKMARK
-#        define B_BDEV BABL_BROWSER_DEV_TOOLS  // hard one to remember
 #        define B_BRLD BABL_BROWSER_RELOAD
-#        define B_BFULL BABL_BROWSER_FULLSCREEN
 #        define B_ZIN BABL_BROWSER_ZOOM_IN
 #        define B_ZOUT BABL_BROWSER_ZOOM_OUT
+#        define B_BFND BABL_BROWSER_FIND
 #    endif
 
 #endif

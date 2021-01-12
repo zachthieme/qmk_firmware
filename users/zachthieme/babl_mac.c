@@ -15,13 +15,11 @@ and https://github.com/qmk/qmk_firmware/blob/master/keyboards/planck/keymaps/jee
 #    ifdef BABL_MAC
 
 bool babblePaste_mac(uint16_t keycode) {
-#        ifdef BABL_MOVE 
+#        ifdef BABL_MOVE
     BABLM(BABL_GO_LEFT_WORD, IMALT(X_LEFT));
     BABLM(BABL_GO_RIGHT_WORD, IMALT(X_RIGHT));
     BABLM(BABL_GO_START_LINE, IMGUI(X_LEFT));
     BABLM(BABL_GO_END_LINE, IMGUI(X_RIGHT));
-    BABLM(BABL_GO_START_DOC, IMGUI(X_UP));
-    BABLM(BABL_GO_END_DOC, IMGUI(X_DOWN));
     BABLM(BABL_DEL_LEFT_WORD, IMALT(X_BSPACE));
     BABLM(BABL_DEL_RIGHT_WORD, IMALT(X_DELETE));
     BABLM(BABL_DEL_TO_LINE_END, OMSFT(IMGUI(X_RIGHT)) SS_TAP(X_BSPACE));  // this is more app agnostic than ctrl-k
@@ -47,26 +45,12 @@ bool babblePaste_mac(uint16_t keycode) {
 #        ifdef BABL_BROWSER
     BABLM(BABL_BROWSER_NEW_TAB, IMGUI(X_T));
     BABLM(BABL_BROWSER_CLOSE_TAB, SS_LGUI("w"));
-    BABLM(BABL_BROWSER_REOPEN_LAST_TAB, OMSFT(SS_LGUI("t")));
-    BABLM(BABL_BROWSER_NEXT_TAB, OMGUI(IMALT(X_RIGHT)));
-    BABLM(BABL_BROWSER_PREV_TAB, OMGUI(IMALT(X_LEFT)));
     BABLM(BABL_BROWSER_URL_BAR, SS_LGUI("l"));
-    BABLM(BABL_BROWSER_FORWARD, IMGUI(X_RIGHT));
-    BABLM(BABL_BROWSER_BACK, IMGUI(X_LEFT));
-    BABLM(BABL_BROWSER_FIND, SS_LGUI("f"));
-    BABLM(BABL_BROWSER_BOOKMARK, SS_LGUI("d"));
-    BABLM(BABL_BROWSER_RELOAD, SS_LGUI("r"));  //  reload
-    BABLM(BABL_BROWSER_FULLSCREEN, OMGUI(SS_LCTRL("p")));
+    BABLM(BABL_BROWSER_RELOAD, SS_LGUI("r"));
     BABLM(BABL_BROWSER_ZOOM_IN, IMGUI(X_KP_PLUS));  // ctr+ +
     BABLM(BABL_BROWSER_ZOOM_OUT, IMGUI(X_KP_MINUS));
-#            ifdef BABL_BROWSER_CHROME
-    BABLM(BABL_BROWSER_VIEWSRC, SS_LGUI("u"));           // Chrome or firefox
-    BABLM(BABL_BROWSER_DEV_TOOLS, OMGUI(SS_LALT("i")));  // Chrome or Firefox
-#            endif
-#            ifdef BABL_BROWSER_SAFARI
-    BABLM(BABL_BROWSER_VIEWSRC, OMGUI(IMALT(X_U)));  // Safari
-                                                     // BABLM( BABL_BROWSER_DEV_TOOLS,	// No real equivalent for Safari
-#            endif
+    BABLM(BABL_BROWSER_FIND, SS_LGUI("f"));
+
 #        endif  //  BABL_BROWSER
 
     // Todo, ring bell, flash light, show user this isn't supported
