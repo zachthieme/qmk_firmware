@@ -7,13 +7,6 @@
 #    undef TAPPING_TERM
 #endif  // TAPPING_TERM
 #    define TAPPING_TERM 300
-/*
-#if defined(KEYBOARD_ergodox_ez)
-#    define TAPPING_TERM 300
-#else
-#    define TAPPING_TERM 300
-#endif
-*/
 
 #define TAPPING_TERM_PER_KEY
 
@@ -28,6 +21,4 @@
 #define BABL_MOVE // Uncomment to add basic cursor movement
 #define BABL_OSKEYS // This adds Cut, paste, window movement and common OS shortcuts
 #define BABL_BROWSER // Browser shortcuts
-
-//// What Browser shortcuts?
 #define BABL_BROWSER_CHROME // Chrome browser, Google apps
