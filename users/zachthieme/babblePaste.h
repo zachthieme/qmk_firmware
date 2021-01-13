@@ -93,6 +93,7 @@ enum babble_keycodes {
     BABL_SCREENCAPTURE,
     BABL_SWITCH_KEYBOARD_LAYOUT,
     BABL_APP_SAVE,
+    BABL_LAUNCHER,
 #    endif
 #    ifdef BABL_BROWSER
     BABL_BROWSER_NEW_TAB,
@@ -166,6 +167,7 @@ bool babblePaste_linux(uint16_t keycode);
 #        define B_CAPP BABL_CLOSE_APP
 #        define B_SCAP BABL_SCREENCAPTURE
 #        define B_KEYB BABL_SWITCH_KEYBOARD_LAYOUT
+#        define B_RUN BABL_LAUNCHER 
 #    endif
 
 #    ifdef BABL_BROWSER
