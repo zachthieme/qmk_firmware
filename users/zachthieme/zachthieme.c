@@ -5,9 +5,9 @@
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case KC_LSPO:
-            return 130;
+            return 200;
         case KC_RSPC:
-            return 130;
+            return 200;
         default:
             return TAPPING_TERM;
     }

@@ -51,7 +51,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
 #define ______________WORKMAN_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_D,          KC_R,          KC_W,          KC_B
-#define ______________WORKMAN_MOD_L2_______________        LT(_SCREEN, KC_DELETE),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_H),    KC_T,          KC_G
+#define ______________WORKMAN_MOD_L2_______________        LT(_SCREEN, KC_MINS),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_H),    KC_T,          KC_G
 #define ______________WORKMAN_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_M,          KC_C,          KC_V
 
 #define ______________WORKMAN_MOD_R1_______________        KC_J,              KC_F,              KC_U,          KC_P,         KC_SCLN,          KC_BSLS
@@ -75,16 +75,17 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_R2__________________        B_GSOL, KC_LEFT, KC_DOWN,       KC_RIGHT, B_GEOL, Z_KVM_2
 #define ___________________NAV_R3__________________        B_WINN, KC_PGUP, BABL_CANCEL,   KC_PGDN,  B_BFND, Z_KVM_3
 
-#define _________________DELETE_L2_________________        KC_TRNS, B_DSOL, B_DLW, B_DRW, B_DEOL, KC_TRNS
+#define _________________DELETE_L2_________________        KC_TRNS, B_DSOL, KC_TRNS, B_DLW, B_DRW, B_DEOL
 
 #define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
 #define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
 #define _________________SCREEN_R3_________________        KC_TRNS, WIN_L23, WIN_R23, WIN_RB,  KC_TRNS, Z_KVM_3
 
 #define ___________________FLASH___________________        _______, KC_MAKE, RESET, KC_QWERTY, KC_WORKMAN, _______
-#define ___________________META_L__________________        B_RUN, KC_LBRACKET
-#define ___________________META_R__________________        KC_MINS, KC_BSPC
+#define ___________________META_L__________________        B_RUN, LT(_SCREEN, KC_LBRACKET)
+#define ___________________META_R__________________        LT(_SCREEN, KC_MINS), KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
+#define ________________META_L_ALT_________________        KC_ESCAPE, _______
 
 
 
