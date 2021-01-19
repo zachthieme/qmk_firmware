@@ -15,7 +15,6 @@
 //// Uncomment the modes you want to enable
 #define BABL_WINDOWS
 #define BABL_MAC
-#define BABL_LINUX
 
 //// These enable subsets of babble macros. Disable options to save space
 #define BABL_MOVE // Uncomment to add basic cursor movement

@@ -63,7 +63,7 @@ NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 #define BB2 LT(_NUMBERS,KC_TAB)
 #define BB3 LT(_NUMBERS,KC_ENTER)
 
-// // MACRO's for moving windows on Mac
+// // MACRO's for moving windows on Mac or Win10 (requires installing divvy)
 #define WIN_L23 LCTL(LALT(KC_1))
 #define WIN_R23 LCTL(LALT(KC_2))
 #define WIN_RB  LCTL(LALT(KC_3))

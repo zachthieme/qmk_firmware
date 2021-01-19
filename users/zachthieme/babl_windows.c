@@ -48,6 +48,7 @@ bool babblePaste_win(uint16_t keycode) {
     BABLM(BABL_RIGHTDENT, SS_LCTL("]"));
     BABLM(BABL_CANCEL, SS_LCTL("c"));
     BABLM(BABL_LAUNCHER, SS_TAP(X_LGUI));
+    BABLM(BABL_CLIP, SS_LGUI("v"));
 #        endif
 
 #        ifdef BABL_BROWSER

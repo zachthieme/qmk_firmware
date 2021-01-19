@@ -85,7 +85,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________META_L__________________        B_RUN, LT(_SCREEN, KC_LBRACKET)
 #define ___________________META_R__________________        LT(_SCREEN, KC_MINS), KC_BSPC
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
-#define ________________META_L_ALT_________________        KC_ESCAPE, _______
+#define ________________META_L_ALT_________________        B_CLIP, _______
 
 
 
