@@ -62,10 +62,10 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________SYMBOL_L2_________________        KC_TRNS,  KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_ASTR
 #define _________________SYMBOL_L3_________________        KC_TRNS,  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_AMPR
 
-#define _________________NUMBER_R1_________________        KC_0,    KC_7, KC_8, KC_9, KC_PPLS, KC_PAST
-#define _________________NUMBER_R2_________________        KC_0,    KC_4, KC_5, KC_6, KC_PMNS, KC_PSLS
-#define _________________NUMBER_R3_________________        KC_PDOT, KC_1, KC_2, KC_3, KC_0,    KC_PEQL
-#define _________________NUMBER_R4_________________        KC_0,    KC_PDOT
+#define _________________NUMBER_R1_________________        _______, KC_7, KC_8, KC_9, KC_PPLS, KC_PAST
+#define _________________NUMBER_R2_________________        _______, KC_4, KC_5, KC_6, KC_PMNS, KC_PSLS
+#define _________________NUMBER_R3_________________        _______, KC_1, KC_2, KC_3, KC_PEQL, KC_PEQL
+#define _________________NUMBER_R4_________________        KC_0,    KC_DOT
 
 #define ___________________NAV_L1__________________        _______, BABL_CLOSE_APP,  BABL_BROWSER_CLOSE_TAB, BABL_BROWSER_URL_BAR, B_BRLD,     B_NTAB
 #define ___________________NAV_L2__________________        _______, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,     BABL_LEFTDENT
