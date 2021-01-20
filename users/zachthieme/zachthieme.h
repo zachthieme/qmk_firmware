@@ -15,7 +15,8 @@ enum userspace_layers {
     _WORKMAN,
     _NAVIGATION,
     _NUMBERS,
-    _SCREEN
+    _SCREEN,
+    _FORMAT
 };
 
 #if defined(BABBLE_END_RANGE)
