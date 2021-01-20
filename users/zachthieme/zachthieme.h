@@ -15,8 +15,7 @@ enum userspace_layers {
     _WORKMAN,
     _NAVIGATION,
     _NUMBERS,
-    _SCREEN,
-    _FORMAT
+    _SCREEN
 };
 
 #if defined(BABBLE_END_RANGE)
@@ -40,6 +39,7 @@ Z_KVM_2,        // KVM swithing command
 Z_KVM_3,        // KVM swithing command
 Z_KVM_4,        // KVM swithing command
 FILE_MAIL,
+COL_SEL,
 NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 };
 

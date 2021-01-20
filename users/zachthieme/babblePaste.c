@@ -37,6 +37,9 @@ void babble_mode_decrement() {
     }
 }
 
+uint8_t get_babble_mode(){
+  return babble_mode;
+}
 /* this function runs the appropriate babblepaste macro, given
 the global babble_mode and a keycode defined in the babble_keycodes enum.
 

@@ -1,5 +1,4 @@
 #include "zachthieme.h"
-
 // Added these to ensure I stopped typing paren+LC instead of a CL
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -36,6 +35,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (!mods) {
               set_single_persistent_default_layer(keycode - KC_QWERTY);
             }
+          }
+          break;
+
+        case COL_SEL:
+          if (record->event.pressed) {
+            switch (get_babble_mode()) {
+              case 0: //mac
+                register_code(KC_LCTL);
+                register_code(KC_LSFT);
+                break;
+
+              case 1: // Windows
+                register_code(KC_LALT);
+                register_code(KC_LSFT);
+                break;
+              /* code */
+            }
+          } else {
+              unregister_code(KC_LCTL);
+              unregister_code(KC_LSFT);
+              unregister_code(KC_LALT);
           }
           break;
 
