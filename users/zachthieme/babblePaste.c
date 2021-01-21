@@ -71,16 +71,6 @@ bool babblePaste(uint16_t keycode) {
         babblePaste_win(keycode);
     }
 #    endif
-#    ifdef BABL_LINUX
-    if (keycode == BABL_DO_LINUX) {
-        set_babble_mode(BABL_LINUX_MODE);
-        babble_led_user();
-        return true;
-    }
-    if (babble_mode == BABL_LINUX_MODE) {
-        babblePaste_linux(keycode);
-    }
-#    endif
 
     return false;
 }

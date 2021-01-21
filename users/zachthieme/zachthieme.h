@@ -1,6 +1,6 @@
 #pragma once
 #include QMK_KEYBOARD_H
-// #include "custom_keycodes.h"
+
 #include "version.h"
 #include "eeprom.h"
 #include "wrappers.h"
@@ -12,10 +12,11 @@
 /* Define layer names */
 enum userspace_layers {
     _QWERTY  = 0,
-    _WORKMAN,
+    // _WORKMAN,
     _NAVIGATION,
     _NUMBERS,
-    _SCREEN
+    _SCREEN,
+    _MOUSE
 };
 
 #if defined(BABBLE_END_RANGE)

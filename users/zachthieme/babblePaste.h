@@ -27,9 +27,6 @@ enum babble_modes {
 #    ifdef BABL_WINDOWS
     BABL_WINDOWS_MODE,
 #    endif
-#    ifdef BABL_LINUX
-    BABL_LINUX_MODE,
-#    endif
     BABL_MODEMAX
 };
 
@@ -92,7 +89,7 @@ enum babble_keycodes {
     BABL_WINDOW_NEW,
     BABL_CLOSE_APP,
     BABL_SCREENCAPTURE,
-    BABL_SWITCH_KEYBOARD_LAYOUT,
+    // BABL_SWITCH_KEYBOARD_LAYOUT,
     BABL_APP_SAVE,
     BABL_LAUNCHER,
     BABL_CLIP,
@@ -114,9 +111,6 @@ enum babble_keycodes {
 #    ifdef BABL_MAC
     BABL_DO_MAC,
 #    endif
-#    ifdef BABL_LINUX
-    BABL_DO_LINUX,
-#    endif
     BABBLE_END_RANGE
 };
 
@@ -132,10 +126,6 @@ bool babblePaste_win(uint16_t keycode);
 #    ifdef BABL_MAC
 #        define B_MAC BABL_DO_MAC
 bool babblePaste_mac(uint16_t keycode);
-#    endif
-#    ifdef BABL_LINUX
-#        define B_LINUX BABL_DO_LINUX
-bool babblePaste_linux(uint16_t keycode);
 #    endif
 
 #    define BABL_INC babble_mode_increment();
@@ -163,12 +153,12 @@ bool babblePaste_linux(uint16_t keycode);
 #        define B_CUT BABL_CUT
 #        define B_COPY BABL_COPY
 #        define B_PASTE BABL_PASTE
-#        define B_SELALL BABL_SELECT_ALL
+// #        define B_SELALL BABL_SELECT_ALL
 #        define B_SELA BABL_SELECT_ALL
 #        define B_WINN BABL_WINDOW_NEW
 #        define B_CAPP BABL_CLOSE_APP
 #        define B_SCAP BABL_SCREENCAPTURE
-#        define B_KEYB BABL_SWITCH_KEYBOARD_LAYOUT
+// #        define B_KEYB BABL_SWITCH_KEYBOARD_LAYOUT
 #        define B_RUN BABL_LAUNCHER
 #        define B_CLIP BABL_CLIP
 #    endif

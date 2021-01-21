@@ -40,7 +40,6 @@ bool babblePaste_win(uint16_t keycode) {
     BABLM(BABL_WINDOW_NEW, IMCTL(X_N));
     BABLM(BABL_CLOSE_APP, IMALT(X_F4));
     BABLM(BABL_SCREENCAPTURE, OMSFT(SS_LGUI("s")));
-    BABLM(BABL_SWITCH_KEYBOARD_LAYOUT, IMGUI(X_SPACE));
 
     // Added by Zach Thieme
     BABLM(BABL_APP_SAVE, SS_LCTL("s"));

@@ -44,7 +44,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __________________BLANK_6__________________        _______, _______, _______, _______, _______, _______
 
 #define _______________QWERTY_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_W,          KC_E,          KC_R,          KC_T
-#define _______________QWERTY_MOD_L2_______________        LT(_SCREEN, KC_DELETE),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    KC_F,          KC_G
+#define _______________QWERTY_MOD_L2_______________        LT(_MOUSE, KC_MINS),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    KC_F,          KC_G
 #define _______________QWERTY_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_C,          KC_V,          KC_B
 
 #define _______________QWERTY_MOD_R1_______________        KC_Y,              KC_U,              KC_I,          KC_O,         KC_P,          KC_BSLS
@@ -88,9 +88,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 #define ________________META_L_ALT_________________        B_CLIP, COL_SEL
 
-
-
-
-
+#define _________________MOUSE_L2__________________        _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______
+#define _________________MOUSE_R1__________________        _______, KC_BTN1, KC_MS_U, KC_BTN2, _______, _______
+#define _________________MOUSE_R2__________________        _______, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______
 
 // clang-format on
