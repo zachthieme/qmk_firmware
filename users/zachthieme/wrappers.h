@@ -16,6 +16,7 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
 #define LAYOUT_ortho_4x12_wrapper(...)       LAYOUT_ortho_4x12(__VA_ARGS__)
 #define LAYOUT_ortho_5x15_wrapper(...)       LAYOUT_ortho_5x15(__VA_ARGS__)
+#define LAYOUT_ortho_5x14_wrapper(...)       LAYOUT_ortho_5x14(__VA_ARGS__)
 #define LAYOUT_gergo_wrapper(...)            LAYOUT_gergo(__VA_ARGS__)
 
 /*
