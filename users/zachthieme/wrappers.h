@@ -83,7 +83,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________SCREEN_R3_________________        KC_TRNS, WIN_L23, WIN_R23, WIN_RB,  KC_TRNS, Z_KVM_3
 
 #define ___________________FLASH___________________        _______, KC_MAKE, RESET, KC_QWERTY, KC_WORKMAN, _______
-#define ___________________META_L__________________        LT(_NUMBERS,B_RUN), LT(_SCREEN, KC_LBRACKET)
+#define ___________________META_L__________________        B_RUN, LT(_SCREEN, KC_LBRACKET)
 #define ___________________META_R__________________        LT(_SCREEN, KC_MINS), LT(_NUMBERS, KC_BSPC)
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 #define ________________META_L_ALT_________________        B_CLIP, COL_SEL
