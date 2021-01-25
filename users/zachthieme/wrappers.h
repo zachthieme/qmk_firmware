@@ -80,7 +80,7 @@ NOTE: These are all the same length.  If you do a search/replace
 
 #define _________________SCREEN_R1_________________        KC_TRNS, KC_TRNS, WIN_MAX, WIN_RT,  KC_TRNS, Z_KVM_1
 #define _________________SCREEN_R2_________________        WIN_L2,  WIN_L3,  WIN_M3,  WIN_R3,  WIN_R2,  Z_KVM_2
-#define _________________SCREEN_R3_________________        SCR_LFT, WIN_L23, WIN_R23, WIN_RB,  SCR_RGT, Z_KVM_3
+#define _________________SCREEN_R3_________________        B_LMON, WIN_L23, WIN_R23, WIN_RB,   B_RMON, Z_KVM_3
 
 #define ___________________FLASH___________________        _______, KC_MAKE, RESET, KC_QWERTY, KC_WORKMAN, _______
 #define ___________________META_L__________________        B_RUN, LT(_SCREEN, KC_LBRACKET)

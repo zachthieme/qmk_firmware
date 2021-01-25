@@ -93,6 +93,8 @@ enum babble_keycodes {
     BABL_APP_SAVE,
     BABL_LAUNCHER,
     BABL_CLIP,
+    BABLE_MOVE_LEFT_MONITOR,
+    BABLE_MOVE_RIGHT_MONITOR,
 #    endif
 #    ifdef BABL_BROWSER
     BABL_BROWSER_NEW_TAB,
@@ -161,6 +163,8 @@ bool babblePaste_mac(uint16_t keycode);
 // #        define B_KEYB BABL_SWITCH_KEYBOARD_LAYOUT
 #        define B_RUN BABL_LAUNCHER
 #        define B_CLIP BABL_CLIP
+#        define B_LMON BABLE_MOVE_LEFT_MONITOR
+#        define B_RMON BABLE_MOVE_RIGHT_MONITOR
 #    endif
 
 #    ifdef BABL_BROWSER
