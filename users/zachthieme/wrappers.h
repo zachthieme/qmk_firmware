@@ -86,6 +86,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________META_L__________________        B_RUN, LT(_SCREEN, KC_LBRACKET)
 #define ___________________META_R__________________        LT(_SCREEN, KC_MINS), LT(_NUMBERS, KC_BSPC)
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
+// TODO: add the below to babble paste
+#define ________________SCREEN_R_ALT_______________        LCTL(KC_SPACE), LALT(KC_TAB)
 #define ________________META_L_ALT_________________        B_CLIP, COL_SEL
 
 #define _________________MOUSE_L2__________________        _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______
