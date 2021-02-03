@@ -59,9 +59,9 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ______________WORKMAN_MOD_R2_______________        KC_Y,              KC_N,              RALT_T(KC_E),  RCTL_T(KC_O), RGUI_T(KC_I), LT(_SCREEN, KC_QUOT)
 #define ______________WORKMAN_MOD_R3_______________        KC_K,              KC_L,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
-#define _________________SYMBOL_L1_________________        KC_TRNS,  KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_PIPE
+#define _________________SYMBOL_L1_________________        KC_TRNS,  KC_AMPR, KC_AT,   KC_LPRN, KC_RPRN, KC_PIPE
 #define _________________SYMBOL_L2_________________        KC_TRNS,  KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_ASTR
-#define _________________SYMBOL_L3_________________        KC_TRNS,  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_AMPR
+#define _________________SYMBOL_L3_________________        KC_TRNS,  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_EXLM
 
 #define _________________NUMBER_R1_________________        _______, KC_7, KC_8, KC_9, KC_PPLS, KC_PAST
 #define _________________NUMBER_R2_________________        _______, KC_4, KC_5, KC_6, KC_PMNS, KC_PSLS
@@ -87,7 +87,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________META_R__________________        LT(_SCREEN, KC_MINS), LT(_NUMBERS, KC_BSPC)
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 // TODO: add the below to babble paste
-#define ________________SCREEN_R_ALT_______________        LCTL(KC_SPACE), LALT(KC_TAB)
+#define ________________SCREEN_R_ALT_______________        LCTL(KC_SPACE), _______
 #define ________________META_L_ALT_________________        B_CLIP, COL_SEL
 
 #define _________________MOUSE_L2__________________        _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______
