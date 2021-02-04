@@ -34,7 +34,7 @@
     K00,        K01,       K02,     K03,      K04,     K05,   KC_GRAVE,                  KC_EQUAL,       K06,   K07,      K08,       K09,    K0A,    K0B, \
     K10,        K11,       K12,     K13,      K14,     K15,                                              K16,   K17,      K18,       K19,    K1A,    K1B, \
     K20,        K21,       K22,     K23,      K24,     K25,   KC_LBRACKET,               KC_RBRACKET,    K26,   K27,      K28,       K29,    K2A,    K2B, \
-    KC_NO,    KC_NO,   KC_END,  K30,      K31,                                                       K32,   K33,      KC_NO,     KC_NO,  KC_NO, \
+    KC_NO,    KC_NO,   KC_END,  K30,      K31,                                                           K32,   K33,      KC_NO,     KC_NO,  KC_NO, \
                                                       B_SCAP, KC_VOLD,                   WEBUSB_PAIR,        KC_MEDIA_PLAY_PAUSE, \
                                                               KC_PGUP,                   KC_PGDOWN, \
                                                    BB1, BB2,  KC_LBRACKET,               KC_MINUS, BB3, BB1 \
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_SCREEN] = LAYOUT_ergodox_pretty_base_wrapper(
     ___________________FLASH___________________, _________________SCREEN_R1_________________,
     _________________DELETE_L2_________________, _________________SCREEN_R2_________________,
-    __________________BLANK_6__________________, _________________SCREEN_R3_________________,
+    __________________SECRET___________________, _________________SCREEN_R3_________________,
     ___________________META_L__________________, ________________SCREEN_R_ALT_______________
   ),
 

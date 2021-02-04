@@ -88,6 +88,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ________________META_R_ALT_________________        KC_ESCAPE, FILE_MAIL
 // TODO: add the below to babble paste
 #define ________________SCREEN_R_ALT_______________        LCTL(KC_SPACE), _______
+#define __________________SECRET___________________        KC_SECRET_1, KC_SECRET_2, _______, _______, _______, _______
 #define ________________META_L_ALT_________________        B_CLIP, COL_SEL
 
 #define _________________MOUSE_L2__________________        _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______

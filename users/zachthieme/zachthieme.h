@@ -39,6 +39,8 @@ Z_KVM_1,        // KVM swithing command
 Z_KVM_2,        // KVM swithing command
 Z_KVM_3,        // KVM swithing command
 Z_KVM_4,        // KVM swithing command
+KC_SECRET_1,
+KC_SECRET_2,
 FILE_MAIL,
 COL_SEL,
 NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes

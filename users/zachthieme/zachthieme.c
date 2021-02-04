@@ -1,4 +1,10 @@
 #include "zachthieme.h"
+
+__attribute__ ((weak))
+bool process_record_secrets(uint16_t keycode, keyrecord_t *record) {
+  return true;
+}
+
 // Added these to ensure I stopped typing paren+LC instead of a CL
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -111,5 +117,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 break;
 
   }
-  return process_record_keymap(keycode, record);
+  return process_record_keymap(keycode, record) && process_record_secrets(keycode, record);
 }
