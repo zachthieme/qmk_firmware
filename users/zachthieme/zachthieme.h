@@ -62,7 +62,7 @@ NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 // #define DAV_SNAP KC_N
 
 // // MACRO's to clean up keymaps
-#define MUTE KC_AUDIO_MUTE
+// #define MUTE KC_AUDIO_MUTE
 #define SPC_NAV LT(_NAVIGATION,KC_SPACE)
 #define TAB_NUM LT(_NUMBERS,KC_TAB)
 #define ENT_NUM LT(_NUMBERS,KC_ENTER)
