@@ -26,8 +26,8 @@
     KC_ESCAPE,  KC_1,      KC_2,    KC_3,     KC_4,    KC_5,   KC_NO,    KC_NO,    KC_6,    KC_7,     KC_8,      KC_9,    KC_0,   KC_BSPACE, \
     K00,        K01,       K02,     K03,      K04,     K05,    KC_GRAVE, KC_EQUAL, K06,     K07,      K08,       K09,     K0A,    K0B, \
     K10,        K11,       K12,     K13,      K14,     K15,    KC_NO,    KC_NO,    K16,     K17,      K18,       K19,     K1A,    K1B, \
-    K20,        K21,       K22,     K23,      K24,     K25,    TAB_NUM,  ENT_NUM,  K26,     K27,      K28,       K29,     K2A,    K2B, \
-    KC_NO,      KC_HOME,   KC_END,  K30,      K31,     SPC_NAV,KC_NO,    KC_NO,    SPC_NAV, KC_MINS,  K32,       K33,     KC_NO,  KC_NO \
+    K20,        K21,       K22,     K23,      K24,     K25,    KC_NO,    KC_NO,    K26,     K27,      K28,       K29,     K2A,    K2B, \
+    KC_NO,      KC_HOME,   KC_END,  K30,      K31,     SPC_NAV,TAB_NUM,  ENT_NUM,  SPC_NAV, KC_MINS,  K32,       K33,     KC_NO,  KC_NO \
     )
 
 #define LAYOUT_ortho_5x14_base_wrapper(...)       LAYOUT_ortho_5x14_base(__VA_ARGS__)
