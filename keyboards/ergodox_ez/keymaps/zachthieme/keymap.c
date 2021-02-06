@@ -37,7 +37,7 @@
     KC_NO,    KC_NO,   KC_END,  K30,      K31,                                                           K32,   K33,      KC_NO,     KC_NO,  KC_NO, \
                                                       B_SCAP, KC_VOLD,                   WEBUSB_PAIR,        KC_MEDIA_PLAY_PAUSE, \
                                                               KC_PGUP,                   KC_PGDOWN, \
-                                                   BB1, BB2,  KC_LBRACKET,               KC_MINUS, BB3, BB1 \
+                                           SPC_NAV, TAB_NUM,  KC_LBRACKET,               KC_MINUS, ENT_NUM, SPC_NAV \
     )
 
 #define LAYOUT_ergodox_pretty_base_wrapper(...)       LAYOUT_ergodox_pretty_base(__VA_ARGS__)

@@ -63,9 +63,9 @@ NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 
 // // MACRO's to clean up keymaps
 #define MUTE KC_AUDIO_MUTE
-#define BB1 LT(_NAVIGATION,KC_SPACE)
-#define BB2 LT(_NUMBERS,KC_TAB)
-#define BB3 LT(_NUMBERS,KC_ENTER)
+#define SPC_NAV LT(_NAVIGATION,KC_SPACE)
+#define TAB_NUM LT(_NUMBERS,KC_TAB)
+#define ENT_NUM LT(_NUMBERS,KC_ENTER)
 
 // // MACRO's for moving windows on Mac (requires moom or divvy) or Win10 (requires installing divvy)
 #define WIN_L23 LCTL(LALT(LSFT(KC_1)))
@@ -78,5 +78,9 @@ NEW_SAFE_RANGE  // use "NEWPLACEHOLDER for keymap specific codes
 #define WIN_L2  LCTL(LALT(LSFT(KC_LEFT)))
 #define WIN_R2  LCTL(LALT(LSFT(KC_RIGHT)))
 #define WIN_MAX LCTL(LALT(LSFT(KC_ENTER)))
+
+// requires contexts for mac didn't setup on windows
+#define WIN_SEL LCTL(KC_SPACE)
+
 // #define SCR_LFT LGUI(LSFT(KC_LEFT))
 // #define SCR_RGT LGUI(LSFT(KC_RIGHT))

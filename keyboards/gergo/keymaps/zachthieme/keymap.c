@@ -40,7 +40,7 @@
     K00, K01, K02, K03, K04, K05,                                                K06, K07, K08, K09, K0A, K0B, \
     K10, K11, K12, K13, K14, K15, KC_GRAVE,                            KC_EQL,   K16, K17, K18, K19, K1A, K1B, \
     K20, K21, K22, K23, K24, K25, KC_LBRC,   KC_PGUP,       KC_PGDN,   KC_RBRC,  K26, K27, K28, K29, K2A, K2B, \
-                  K30, K31,        BB1, BB2,      BB3, BB1,       K32, K33                          \
+                  K30, K31,        SPC_NAV, TAB_NUM,      ENT_NUM, SPC_NAV,       K32, K33                          \
     )
 
 #define LAYOUT_gergo_base_wrapper(...)       LAYOUT_gergo_base(__VA_ARGS__)
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ___________________FLASH___________________, _________________SCREEN_R1_________________,
     _________________DELETE_L2_________________, _________________SCREEN_R2_________________,
     __________________SECRET___________________, _________________SCREEN_R3_________________,
-    ___________________META_L__________________, ___________________META_R__________________
+    ___________________META_L__________________, ________________SCREEN_R_ALT_______________
   ),
 
   [_MOUSE] = LAYOUT_gergo_base_wrapper(
