@@ -14,6 +14,7 @@ enum userspace_layers {
     _QWERTY  = 0,
     // _WORKMAN,
     _NAVIGATION,
+    _NAV2,
     _NUMBERS,
     _SCREEN,
     _MOUSE

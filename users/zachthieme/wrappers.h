@@ -1,4 +1,4 @@
-#pragma once
+ #pragma once
 
 /*
 Since our quirky block definitions are basically a list of comma separated
@@ -44,11 +44,11 @@ NOTE: These are all the same length.  If you do a search/replace
 #define __________________BLANK_6__________________        _______, _______, _______, _______, _______, _______
 
 #define _______________QWERTY_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_W,          KC_E,          KC_R,          KC_T
-#define _______________QWERTY_MOD_L2_______________        LT(_MOUSE, KC_MINS),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    KC_F,          KC_G
+#define _______________QWERTY_MOD_L2_______________        _______,    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    SFT_T(KC_F),          KC_G
 #define _______________QWERTY_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_C,          KC_V,          KC_B
 
 #define _______________QWERTY_MOD_R1_______________        KC_Y,              KC_U,              KC_I,          KC_O,         KC_P,          KC_BSLS
-#define _______________QWERTY_MOD_R2_______________        KC_H,              KC_J,              RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN), LT(_SCREEN, KC_QUOT)
+#define _______________QWERTY_MOD_R2_______________        KC_H,              SFT_T(KC_J),       RALT_T(KC_K),  RCTL_T(KC_L), RGUI_T(KC_SCLN), LT(_SCREEN, KC_QUOT)
 #define _______________QWERTY_MOD_R3_______________        KC_N,              KC_M,              KC_COMM,       KC_DOT,       KC_SLASH,      KC_RSPC
 
 #define ______________WORKMAN_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_D,          KC_R,          KC_W,          KC_B
@@ -69,12 +69,16 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________NUMBER_R4_________________        KC_0,    KC_DOT
 
 #define ___________________NAV_L1__________________        _______, BABL_CLOSE_APP,  BABL_BROWSER_CLOSE_TAB, BABL_BROWSER_URL_BAR, B_BRLD,     B_NTAB
-#define ___________________NAV_L2__________________        _______, BABL_SELECT_ALL, BABL_APP_SAVE,          KC_BSPC,              KC_DEL,     BABL_LEFTDENT
+#define ___________________NAV_L2__________________        LT(_NAV2,KC_TRNS),BABL_SELECT_ALL, BABL_APP_SAVE,KC_BSPC,              KC_DEL,     BABL_LEFTDENT
 #define ___________________NAV_L3__________________        _______, BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE, BABL_RIGHTDENT
 
 #define ___________________NAV_R1__________________        B_ZIN,  B_L1W,   KC_UP,         B_R1W,    B_ZOUT, Z_KVM_1
 #define ___________________NAV_R2__________________        B_GSOL, KC_LEFT, KC_DOWN,       KC_RIGHT, B_GEOL, Z_KVM_2
 #define ___________________NAV_R3__________________        B_WINN, KC_PGUP, BABL_CANCEL,   KC_PGDN,  B_BFND, Z_KVM_3
+
+#define __________________NAV_2_R1_________________        _______, B_DLW,   _______,   B_DRW,    _______, _______
+#define __________________NAV_2_R2_________________        B_DSOL,  _______, _______,   _______,  B_DEOL,  _______
+#define __________________NAV_2_R3_________________        _______, _______, _______,   _______,  _______, _______
 
 #define _________________DELETE_L2_________________        KC_TRNS, B_DSOL, KC_TRNS, B_DLW, B_DRW, B_DEOL
 
