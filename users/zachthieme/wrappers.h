@@ -18,6 +18,7 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define LAYOUT_ortho_5x15_wrapper(...)       LAYOUT_ortho_5x15(__VA_ARGS__)
 #define LAYOUT_ortho_5x14_wrapper(...)       LAYOUT_ortho_5x14(__VA_ARGS__)
 #define LAYOUT_gergo_wrapper(...)            LAYOUT_gergo(__VA_ARGS__)
+#define LAYOUT_kyria_num_wrapper(...)        LAYOUT_kyria_num(__VA_ARGS__)
 
 /*
 Blocks for each of the four major keyboard layouts
