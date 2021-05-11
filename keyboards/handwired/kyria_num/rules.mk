@@ -1,5 +1,5 @@
 # MCU name
-MCU = STM32F303xC
+MCU = STM32F303
 
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
