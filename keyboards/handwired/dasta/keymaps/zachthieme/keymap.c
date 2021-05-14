@@ -1,13 +1,13 @@
 #include QMK_KEYBOARD_H
 #include "zachthieme.h"
 
-#define LAYOUT_kyria_num_base( \
+#define LAYOUT_dasta_base( \
 	K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, \
 	K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, K1B, \
 	K20, K21, K22, K23, K24, K25, K2A, K2B, K2C, K2D, K2E, K2F, \
 	                K31, K32, K37, K38  \
   ) \
-  LAYOUT_kyria_num_wrapper( \
+  LAYOUT_dasta_wrapper( \
     KC_ESCAPE,  KC_1,      KC_2,    KC_3,     KC_4,    KC_5,                                        KC_6,  KC_7, KC_8, KC_9, KC_0, KC_BSPACE, \
     K00,        K01,       K02,     K03,      K04,     K05,                                         K06,   K07,  K08,  K09,  K0A,  K0B, \
     K10,        K11,       K12,     K13,      K14,     K15,                                         K16,   K17,  K18,  K19,  K1A,  K1B, \
@@ -15,52 +15,52 @@
 		                                       KC_NO, K31, K32,  SPC_NAV, TAB_NUM,    ENT_NUM, SPC_NAV, K37,   K38,  KC_NO  \
   )
 
-#define LAYOUT_kyria_num_base_wrapper(...)       LAYOUT_kyria_num_base(__VA_ARGS__)
+#define LAYOUT_dasta_base_wrapper(...)       LAYOUT_dasta_base(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_QWERTY] = LAYOUT_kyria_num_base_wrapper(
+  [_QWERTY] = LAYOUT_dasta_base_wrapper(
     _______________QWERTY_MOD_L1_______________, _______________QWERTY_MOD_R1_______________,
     _______________QWERTY_MOD_L2_______________, _______________QWERTY_MOD_R2_______________,
     _______________QWERTY_MOD_L3_______________, _______________QWERTY_MOD_R3_______________,
     ___________________META_L__________________, ___________________META_R__________________
 	),
 
-  // [_WORKMAN] = LAYOUT_kyria_num_base_wrapper(
+  // [_WORKMAN] = LAYOUT_dasta_base_wrapper(
   //   ______________WORKMAN_MOD_L1_______________, ______________WORKMAN_MOD_R1_______________,
   //   ______________WORKMAN_MOD_L2_______________, ______________WORKMAN_MOD_R2_______________,
   //   ______________WORKMAN_MOD_L3_______________, ______________WORKMAN_MOD_R3_______________,
   //   ___________________META_L__________________, ___________________META_R__________________
   //   ),
 	//
-  [_NAVIGATION] = LAYOUT_kyria_num_base_wrapper(
+  [_NAVIGATION] = LAYOUT_dasta_base_wrapper(
     ___________________NAV_L1__________________, ___________________NAV_R1__________________,
     ___________________NAV_L2__________________, ___________________NAV_R2__________________,
     ___________________NAV_L3__________________, ___________________NAV_R3__________________,
     ________________META_L_ALT_________________, ________________META_R_ALT_________________
   ),
 
-  [_NAV2] = LAYOUT_kyria_num_base_wrapper(
+  [_NAV2] = LAYOUT_dasta_base_wrapper(
     __________________BLANK_6__________________, __________________NAV_2_R1_________________,
     __________________BLANK_6__________________, __________________NAV_2_R2_________________,
     __________________BLANK_6__________________, __________________NAV_2_R3_________________,
     ________________META_L_ALT_________________, ________________META_R_ALT_________________
   ),
 
-  [_NUMBERS] = LAYOUT_kyria_num_base_wrapper(
+  [_NUMBERS] = LAYOUT_dasta_base_wrapper(
     _________________SYMBOL_L1_________________, _________________NUMBER_R1_________________,
     _________________SYMBOL_L2_________________, _________________NUMBER_R2_________________,
     _________________SYMBOL_L3_________________, _________________NUMBER_R3_________________,
     ___________________META_L__________________, _________________NUMBER_R4_________________
   ),
 
-  [_SCREEN] = LAYOUT_kyria_num_base_wrapper(
+  [_SCREEN] = LAYOUT_dasta_base_wrapper(
     ___________________FLASH___________________, _________________SCREEN_R1_________________,
     _________________DELETE_L2_________________, _________________SCREEN_R2_________________,
     __________________SECRET___________________, _________________SCREEN_R3_________________,
     ___________________META_L__________________, ________________SCREEN_R_ALT_______________
   ),
 
-  [_MOUSE] = LAYOUT_kyria_num_base_wrapper(
+  [_MOUSE] = LAYOUT_dasta_base_wrapper(
     __________________BLANK_6__________________, _________________MOUSE_R1__________________,
     _________________MOUSE_L2__________________, _________________MOUSE_R2__________________,
     __________________BLANK_6__________________, __________________BLANK_6__________________,

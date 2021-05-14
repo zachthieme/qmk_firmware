@@ -86,6 +86,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           break;
 
+        case Z_KVM_4:
+          if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_LCTL) SS_TAP(X_LCTL) "4");
+            set_babble_mode(BABL_WINDOWS_MODE);
+          }
+          break;
+
         case FILE_MAIL:
           if (record->event.pressed) {
             SEND_STRING(SS_LCTL(SS_LSFT("7")));
