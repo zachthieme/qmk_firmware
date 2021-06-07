@@ -1,37 +1,3 @@
- #pragma once
-
-/*
-Since our quirky block definitions are basically a list of comma separated
-arguments, we need a wrapper in order for these definitions to be
-expanded before being used as arguments to the LAYOUT_xxx macro.
-*/
-#if (!defined(LAYOUT) && defined(KEYMAP))
-#    define LAYOUT KEYMAP
-#endif
-
-// clang-format off
-#define LAYOUT_ergodox_wrapper(...)          LAYOUT_ergodox(__VA_ARGS__)
-#define LAYOUT_ergodox_pretty_wrapper(...)   LAYOUT_ergodox_pretty(__VA_ARGS__)
-#define KEYMAP_wrapper(...)                  LAYOUT(__VA_ARGS__)
-#define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
-#define LAYOUT_ortho_4x12_wrapper(...)       LAYOUT_ortho_4x12(__VA_ARGS__)
-#define LAYOUT_ortho_5x15_wrapper(...)       LAYOUT_ortho_5x15(__VA_ARGS__)
-#define LAYOUT_ortho_5x14_wrapper(...)       LAYOUT_ortho_5x14(__VA_ARGS__)
-#define LAYOUT_gergo_wrapper(...)            LAYOUT_gergo(__VA_ARGS__)
-#define LAYOUT_dasta_wrapper(...)            LAYOUT_dasta(__VA_ARGS__)
-#define LAYOUT_kyria_pretty_wrapper(...)     LAYOUT(__VA_ARGS__)
-
-/*
-Blocks for each of the four major keyboard layouts
-Organized so we can quickly adapt \and modify all of them
-at once, rather than for each keyboard, one at a time.
-And this allows for much cleaner blocks in the keymaps.
-For instance Tap/Hold for Control on all of the layouts
-
-NOTE: These are all the same length.  If you do a search/replace
-  then you need to add/remove underscores to keep the
-  lengths consistent.
-*/
 
 #define _________________WORKMAN_L1________________       KC_Q,    KC_D,    KC_R,   KC_W,     KC_B
 #define _________________WORKMAN_L2________________       KC_A,    KC_S,    KC_H,   KC_T,     KC_G
@@ -48,7 +14,7 @@ NOTE: These are all the same length.  If you do a search/replace
 
 #define _______________QWERTY_MOD_L0_______________        KC_NO,  KC_1,      KC_2,    KC_3,     KC_4,    KC_5
 #define _______________QWERTY_MOD_L1_______________        KC_GRAVE,            KC_Q,              KC_W,          KC_E,          KC_R,          KC_T
-#define _______________QWERTY_MOD_L2_______________        TG(_NUMBERS),    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    SFT_T(KC_F),          KC_G
+#define _______________QWERTY_MOD_L2_______________        _______,    LGUI_T(KC_A),        LCTL_T(KC_S),    LALT_T(KC_D),    SFT_T(KC_F),          KC_G
 #define _______________QWERTY_MOD_L3_______________        KC_LSPO,           KC_Z,  KC_X,          KC_C,          KC_V,          KC_B
 
 #define _______________QWERTY_MOD_R0_______________        KC_6,  KC_7,     KC_8,      KC_9,   KC_0,   KC_BSPC 

@@ -11,7 +11,6 @@ COMBO_ENABLE = no
 NKRO_ENABLE = no
 TAP_DANCE_ENABLE = no
 EXTRAKEY_ENABLE = no
-MOUSEKEY_ENABLE = yes
 LTO_ENABLE = yes # Reduces the compiled firmware size
 EXTRAFLAGS += -flto
 
