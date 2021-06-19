@@ -71,7 +71,7 @@ NOTE: These are all the same length.  If you do a search/replace
 
 #define _________________NUMBER_R0_________________        KC_6,  KC_7,     KC_8,      KC_9,   KC_0,   KC_BSPC 
 #define _________________NUMBER_R1_________________        _______, KC_7, KC_8, KC_9, KC_PPLS, KC_PAST
-#define _________________NUMBER_R2_________________        _______, KC_4, KC_5, KC_6, KC_PMNS, KC_PSLS
+#define _________________NUMBER_R2_________________        KC_BSPC, KC_4, KC_5, KC_6, KC_PMNS, KC_PSLS
 #define _________________NUMBER_R3_________________        _______, KC_1, KC_2, KC_3, KC_PEQL, KC_PEQL
 #define _________________NUMBER_R4_________________        KC_0,    KC_DOT
 
@@ -80,7 +80,7 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________NAV_L3__________________        _______, BABL_UNDO,       BABL_CUT,               BABL_COPY,            BABL_PASTE, BABL_RIGHTDENT
 
 #define ___________________NAV_R0__________________        _______, _______, ______, ______, ______, ______ 
-#define ___________________NAV_R1__________________        B_ZIN,  B_L1W,   KC_UP,         B_R1W,    B_ZOUT, _______
+#define ___________________NAV_R1__________________        B_ZIN,  B_L1W,   KC_UP,         B_R1W,    B_ZOUT, KC_BSPC 
 #define ___________________NAV_R2__________________        B_GSOL, KC_LEFT, KC_DOWN,       KC_RIGHT, B_GEOL, _______
 #define ___________________NAV_R3__________________        B_WINN, KC_PGUP, BABL_CANCEL,   KC_PGDN,  B_BFND, _______ 
 

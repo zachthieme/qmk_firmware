@@ -13,8 +13,31 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return 150;
         case KC_RSPC:
             return 150;
-        default:
-            return TAPPING_TERM;
+				case LT(_NAVIGATION,KC_SPACE):
+						return 200;
+				case LT(_NUMBERS,KC_TAB):
+						return 200;
+				case LT(_NUMBERS,KC_ENTER):
+						return 200;
+/*        case LGUI_T(KC_A):
+						return 300;
+				case LCTL_T(KC_S):
+						return 300;
+				case LALT_T(KC_D):
+						return 300;
+				case SFT_T(KC_F):
+						return 300;
+				case  SFT_T(KC_J):
+						return 300;
+				case RALT_T(KC_K):
+						return 300;
+				case RCTL_T(KC_L):
+						return 300;
+				case RGUI_T(KC_SCLN):
+						return 300;
+						*/
+				default:
+							return TAPPING_TERM;
     }
 }
 
